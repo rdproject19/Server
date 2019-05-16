@@ -10,6 +10,6 @@ public class Main {
 
         SocketServer s = new SocketServer(new InetSocketAddress(host, port));
         s.run();
-        System.out.print("d");
+        System.out.print("a");
     }
 }
