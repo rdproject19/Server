@@ -1,8 +1,6 @@
-package main;
-
 import com.google.common.hash.Hashing;
-import main.server.SocketServer;
-import main.util.LSFR;
+import server.SocketServer;
+import util.LSFR;
 
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;

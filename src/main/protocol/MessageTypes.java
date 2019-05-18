@@ -1,4 +1,4 @@
-package main.protocol;
+package protocol;
 
 public class MessageTypes {
     public static final String HANDSHAKE = "handshake";

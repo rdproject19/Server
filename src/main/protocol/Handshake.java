@@ -1,4 +1,4 @@
-package main.protocol;
+package protocol;
 
 public class Handshake extends BaseMessage {
 
