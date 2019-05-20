@@ -1,5 +1,6 @@
 package protocol;
 
+<<<<<<< HEAD
 import db.CacheManager;
 
 public class Message extends BaseMessage {
@@ -22,4 +23,7 @@ public class Message extends BaseMessage {
             //Send back an error;
         }
     }
+=======
+public class Message extends BaseMessage {
+>>>>>>> fca15036019b012fd153030cfe8b1230138f3971
 }
