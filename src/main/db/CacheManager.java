@@ -1,15 +1,17 @@
 package db;
 
+import exceptions.ConversationNotFoundException;
 import exceptions.UserNotFoundException;
 import org.java_websocket.WebSocketImpl;
 import util.LSFR;
 
 import java.util.HashMap;
+import java.util.Set;
 
 public class CacheManager {
 
     private HashMap<String, UserCacheObject> userCache = new HashMap<>();
-    private HashMap<String, CacheObject> conversationCache = new HashMap<>();
+    private HashMap<String, ConversationCacheObject> conversationCache = new HashMap<>();
 
     public void addUser(String id, String token, WebSocketImpl connection) {
         LSFR lsfr = new LSFR(token);
@@ -29,6 +31,15 @@ public class CacheManager {
             return obj;
         } else {
             throw new UserNotFoundException(uid);
+        }
+    }
+
+    public Set<UserCacheObject> getConversationMembers(String id) throws ConversationNotFoundException {
+        ConversationCacheObject obj = conversationCache.get(id);
+        if (obj != null) {
+            return obj.getMembers();
+        } else {
+            throw new ConversationNotFoundException(id);
         }
     }
 

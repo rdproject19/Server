@@ -22,4 +22,12 @@ public class UserCacheObject extends CacheObject {
     public int getToken() {
         return this.state;
     }
+
+    public WebSocketImpl getConnection() {
+        return connection;
+    }
+
+    public void setConnection(WebSocketImpl newconn) {
+        this.connection = newconn;
+    }
 }
