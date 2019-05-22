@@ -3,16 +3,19 @@ package protocol;
 import db.CacheManager;
 import db.DataProvider;
 import db.UserCacheObject;
+import server.MessageFactory;
 
 public class Message extends BaseMessage {
 
+    public String id;
     public String uid;
     public String convid;
     int token;
     long timestamp;
     String body;
 
-    Message() {
+    public Message(String type) {
+        super(type);
     }
 
     @Override
@@ -21,11 +24,20 @@ public class Message extends BaseMessage {
         UserCacheObject obj = dp.getUserProfile(this.uid);
         obj.shiftLSFR();
         int serverToken = obj.getToken();
+        MessageFactory fac = null;
+        try {
+            fac = new MessageFactory().setType("receipt")
+                    .setMessageID(this.id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
         if (serverToken == this.token) {
             //Success
             dp.enqueueMessage(this);
+            obj.getConnection().send(fac.setStatusCode(200).getBody());
         } else {
-            //Error
+            obj.getConnection().send(fac.setStatusCode(409).getBody());
         }
     }
 }

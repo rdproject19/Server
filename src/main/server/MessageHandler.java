@@ -11,8 +11,11 @@ public class MessageHandler {
 
     private static final Gson gson = new Gson();
 
-    public MessageHandler(SocketServer server) {
+    private DataProvider dataProvider;
+
+    public MessageHandler(SocketServer server, DataProvider d) {
         this.serverInstance = server;
+        this.dataProvider = d;
     }
 
     public void receiveMessage(String raw) {
@@ -20,13 +23,13 @@ public class MessageHandler {
         Class<? extends BaseMessage> msgtype = determineMessageType(msg.type);
         BaseMessage message = gson.fromJson(raw, msgtype);
         try {
-            message.handle(new DataProvider());
+            message.handle(dataProvider);
         } catch (MessageHandleException e) {
-            e.printStackTrace();
+            System.out.println(e.toString());
         }
     }
 
-    public Class<? extends BaseMessage> determineMessageType(String type) {
+    public static Class<? extends BaseMessage> determineMessageType(String type) {
         switch (type) {
             case MessageTypes.MESSAGE:
                 return Message.class;

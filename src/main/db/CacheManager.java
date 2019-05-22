@@ -2,7 +2,7 @@ package db;
 
 import exceptions.ConversationNotFoundException;
 import exceptions.UserNotFoundException;
-import org.java_websocket.WebSocketImpl;
+import org.java_websocket.WebSocket;
 import util.LSFR;
 
 import java.util.HashMap;
@@ -13,13 +13,13 @@ public class CacheManager {
     private HashMap<String, UserCacheObject> userCache = new HashMap<>();
     private HashMap<String, ConversationCacheObject> conversationCache = new HashMap<>();
 
-    public void addUser(String id, String token, WebSocketImpl connection) {
+    public void addUser(String id, String token, WebSocket connection) {
         LSFR lsfr = new LSFR(token);
         UserCacheObject c = new UserCacheObject(id, lsfr, connection);
         userCache.put(id, c);
     }
 
-    public void addUser(String id, String token, long shift, WebSocketImpl connection) {
+    public void addUser(String id, String token, long shift, WebSocket connection) {
         LSFR lsfr = new LSFR(token, shift);
         UserCacheObject c = new UserCacheObject(id, lsfr, connection);
         userCache.put(id, c);

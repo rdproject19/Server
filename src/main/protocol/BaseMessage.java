@@ -10,4 +10,8 @@ public class BaseMessage {
     public void handle(DataProvider dp) throws MessageHandleException {
         throw new BaseTypeHandleException();
     }
+
+    public BaseMessage(String type) {
+        this.type = type;
+    }
 }

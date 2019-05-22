@@ -24,6 +24,7 @@ public class DataProvider {
             return cacheObject;
         } catch (UserNotFoundException ex) {
             //Fetch from DB;
+            ex.printStackTrace();
         }
         return null;
     }

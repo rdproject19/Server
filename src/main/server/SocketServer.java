@@ -1,22 +1,30 @@
 package server;
 
+import com.google.common.hash.Hashing;
+import db.DataProvider;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
+import util.LSFR;
 
 import java.net.InetSocketAddress;
+import java.nio.charset.StandardCharsets;
 
 public class SocketServer extends WebSocketServer {
 
     private MessageHandler messageHandler;
+    private DataProvider dataProvider;
 
     public SocketServer(InetSocketAddress addr) {
         super(addr);
-        this.messageHandler = new MessageHandler(this);
+        this.dataProvider = new DataProvider();
+        this.messageHandler = new MessageHandler(this, dataProvider);
     }
 
     public void onOpen(WebSocket webSocket, ClientHandshake clientHandshake) {
-
+        dataProvider.cache.addUser("koen", Hashing.sha512()
+                .hashString("gewgwegwwgegwghwewegwwherhjerhjer", StandardCharsets.UTF_8)
+                .toString(), webSocket);
     }
 
     public void onClose(WebSocket webSocket, int i, String s, boolean b) {
@@ -30,11 +38,12 @@ public class SocketServer extends WebSocketServer {
     }
 
     public void onError(WebSocket webSocket, Exception e) {
-
+        e.printStackTrace();
     }
 
     public void onStart() {
         System.out.println("Server started");
+
     }
 
 }
