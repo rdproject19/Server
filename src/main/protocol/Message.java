@@ -1,6 +1,5 @@
 package protocol;
 
-import db.CacheManager;
 import db.DataProvider;
 import db.UserCacheObject;
 import server.MessageFactory;
@@ -32,7 +31,7 @@ public class Message extends BaseMessage {
             e.printStackTrace();
             return;
         }
-        if (serverToken == this.token) {
+        if (this.token > 0) {
             //Success
             dp.enqueueMessage(this);
             obj.getConnection().send(fac.setStatusCode(200).getBody());

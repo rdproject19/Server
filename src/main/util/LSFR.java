@@ -9,6 +9,9 @@ public class LSFR {
     private long shiftcounter = 0;
 
     public LSFR(String s) {
+        if (s.length() != 128) {
+            throw new RuntimeException("LSFR seed must be 128 chars long");
+        }
         this.seed = s;
         convertSeedToBits();
     }

@@ -2,6 +2,8 @@ package server;
 
 import com.google.common.hash.Hashing;
 import db.DataProvider;
+import db.UserCacheObject;
+import exceptions.UserNotFoundException;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
@@ -9,6 +11,8 @@ import util.LSFR;
 
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
+import java.util.HashSet;
+import java.util.Set;
 
 public class SocketServer extends WebSocketServer {
 
@@ -25,6 +29,13 @@ public class SocketServer extends WebSocketServer {
         dataProvider.cache.addUser("koen", Hashing.sha512()
                 .hashString("gewgwegwwgegwghwewegwwherhjerhjer", StandardCharsets.UTF_8)
                 .toString(), webSocket);
+        Set<UserCacheObject> testconvo = new HashSet<>();
+        try {
+            testconvo.add(dataProvider.cache.getUser("koen"));
+        } catch (UserNotFoundException e) {
+            e.printStackTrace();
+        }
+        this.dataProvider.cache.addConversation("test", testconvo);
     }
 
     public void onClose(WebSocket webSocket, int i, String s, boolean b) {

@@ -25,6 +25,11 @@ public class CacheManager {
         userCache.put(id, c);
     }
 
+    public void addConversation(String id, Set<UserCacheObject> members) {
+        ConversationCacheObject conversation = new ConversationCacheObject(id, members);
+        this.conversationCache.put(id, conversation);
+    }
+
     public UserCacheObject getUser(String uid) throws UserNotFoundException {
         UserCacheObject obj = userCache.get(uid);
         if (obj != null) {
