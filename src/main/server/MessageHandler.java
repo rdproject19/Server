@@ -1,7 +1,8 @@
 package server;
 
 import com.google.gson.Gson;
-import db.CacheManager;
+import db.DataProvider;
+import exceptions.MessageHandleException;
 import protocol.*;
 
 public class MessageHandler {
@@ -18,9 +19,10 @@ public class MessageHandler {
         BaseMessage msg = gson.fromJson(raw, BaseMessage.class);
         Class<? extends BaseMessage> msgtype = determineMessageType(msg.type);
         BaseMessage message = gson.fromJson(raw, msgtype);
-        message.handle(new CacheManager());
-        if (message.responseAvailable) {
-            //serverInstance.send(message.response)
+        try {
+            message.handle(new DataProvider());
+        } catch (MessageHandleException e) {
+            e.printStackTrace();
         }
     }
 

@@ -1,6 +1,8 @@
 package protocol;
 
 import db.CacheManager;
+import db.DataProvider;
+import db.UserCacheObject;
 
 public class Message extends BaseMessage {
 
@@ -14,13 +16,16 @@ public class Message extends BaseMessage {
     }
 
     @Override
-    public void handle(CacheManager man) {
+    public void handle(DataProvider dp) {
         //Retrieve current token and compare;
-        int serverToken = 0;
-        if (token == serverToken) {
-
+        UserCacheObject obj = dp.getUserProfile(this.uid);
+        obj.shiftLSFR();
+        int serverToken = obj.getToken();
+        if (serverToken == this.token) {
+            //Success
+            dp.enqueueMessage(this);
         } else {
-            //Send back an error;
+            //Error
         }
     }
 }
