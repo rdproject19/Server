@@ -37,7 +37,7 @@ public class CacheManager {
 
     public UserCacheObject getUser(String uid) throws UserNotFoundException {
         UserCacheObject obj = userCache.get(uid);
-        if (obj != null) {
+        if (determineObjectValidity(obj)) {
             return obj;
         } else {
             throw new UserNotFoundException(uid);
@@ -46,10 +46,18 @@ public class CacheManager {
 
     public Set<UserCacheObject> getConversationMembers(String id) throws ConversationNotFoundException {
         ConversationCacheObject obj = conversationCache.get(id);
-        if (obj != null) {
+        if (determineObjectValidity(obj)) {
             return obj.getMembers();
         } else {
             throw new ConversationNotFoundException(id);
+        }
+    }
+
+    private boolean determineObjectValidity(CacheObject obj) {
+        if (obj == null) {
+            return false;
+        } else {
+            return obj.isValid();
         }
     }
 

@@ -2,38 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abe1aa20-8abd-47b0-b081-037592d27678" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/protocol/Handshake.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/util/LSFRTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/db/CacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/data/CacheManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/db/CacheObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/data/CacheObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/db/ConversationCacheObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/data/ConversationCacheObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/db/DataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/data/DataProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/db/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/data/DatabaseAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/db/UserCacheObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/data/UserCacheObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/BaseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/protocol/BaseMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/protocol/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/MessageTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/protocol/MessageTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/UnknownMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/protocol/UnknownMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server/MessageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/server/MessageFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/server/MessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/server/SocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/LSFR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/util/LSFR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/CacheManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/CacheObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/DataProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/UserCacheObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/protocol/BaseMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/protocol/BaseMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/protocol/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/protocol/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/protocol/UnknownMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/protocol/UnknownMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/MessageHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/MessageHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/SocketServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/SocketServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/LSFR.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/LSFR.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/db/DataProviderTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/db/CacheTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/data/CacheTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/db/DataProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/data/DataProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/data/CacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/data/CacheManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/protocol/MessageReceipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/protocol/MessageReceipt.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/data/CacheManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+            <state relative-caret-position="901">
+              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,26 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/data/CacheObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#131#132#0" expanded="true" />
-                <element signature="e#160#161#0" expanded="true" />
-                <element signature="e#344#345#0" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/exceptions/MessageHandleException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+            <state relative-caret-position="255">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -87,7 +43,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="289">
               <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -100,12 +56,21 @@
         <entry file="file://$PROJECT_DIR$/src/main/protocol/Handshake.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#273#274#0" expanded="true" />
-                <element signature="e#307#308#0" expanded="true" />
+                <element signature="e#316#317#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/protocol/MessageReceipt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -114,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/protocol/MessageTypes.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -144,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/server/MessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="85">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,7 +157,6 @@
         <option value="$PROJECT_DIR$/src/main/exceptions/BaseTypeHandleException.java" />
         <option value="$PROJECT_DIR$/src/main/db/UserCacheObject.java" />
         <option value="$PROJECT_DIR$/src/main/db/DataProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/protocol/MessageReceipt.java" />
         <option value="$PROJECT_DIR$/src/main/protocol/UnknownMessage.java" />
         <option value="$PROJECT_DIR$/src/main/protocol/AuthChallengeResponse.java" />
         <option value="$PROJECT_DIR$/test/db/CacheTest.java" />
@@ -209,9 +173,10 @@
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/protocol/MessageTypes.java" />
         <option value="$PROJECT_DIR$/src/main/server/MessageHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/data/CacheManager.java" />
         <option value="$PROJECT_DIR$/src/main/protocol/Handshake.java" />
         <option value="$PROJECT_DIR$/src/main/data/CacheObject.java" />
+        <option value="$PROJECT_DIR$/src/main/data/CacheManager.java" />
+        <option value="$PROJECT_DIR$/src/main/protocol/MessageReceipt.java" />
       </list>
     </option>
   </component>
@@ -228,7 +193,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -286,6 +250,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -398,7 +363,8 @@
       <workItem from="1558519583998" duration="3634000" />
       <workItem from="1558523276607" duration="4556000" />
       <workItem from="1558533763033" duration="774000" />
-      <workItem from="1558601478063" duration="458000" />
+      <workItem from="1558601478063" duration="508000" />
+      <workItem from="1558609027929" duration="406000" />
     </task>
     <task id="LOCAL-00001" summary="Added more stuff for data management">
       <created>1558432897929</created>
@@ -428,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558532045579</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="-Addeed handshakes">
+      <created>1558601953596</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558601953596</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -464,7 +437,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15733000" />
+    <option name="totallyTimeSpent" value="16189000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -479,7 +452,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2818792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28590605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -589,7 +562,8 @@
     <MESSAGE value="More message handling" />
     <MESSAGE value="Very basic message flow is implemented now" />
     <MESSAGE value="-Added some test case to enqueue messages: it works&#10;-Made sure the LSFR only accepts 128 byte seeds" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Added some test case to enqueue messages: it works&#10;-Made sure the LSFR only accepts 128 byte seeds" />
+    <MESSAGE value="-Addeed handshakes" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Addeed handshakes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -920,6 +894,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/protocol/MessageTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/data/ConversationCacheObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -938,6 +929,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/server/MessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/server/MessageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
@@ -948,24 +949,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/protocol/MessageReceipt.java">
+    <entry file="file://$PROJECT_DIR$/src/main/data/CacheObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        <state relative-caret-position="255">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/protocol/MessageTypes.java">
+    <entry file="file://$PROJECT_DIR$/src/main/data/CacheManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/server/MessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="901">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -975,45 +969,19 @@
     <entry file="file://$PROJECT_DIR$/src/main/protocol/Handshake.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/protocol/MessageReceipt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/CacheManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/CacheObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#131#132#0" expanded="true" />
-            <element signature="e#160#161#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
         </state>
       </provider>
     </entry>
