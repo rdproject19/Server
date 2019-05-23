@@ -2,11 +2,13 @@ package server;
 
 import com.google.common.hash.Hashing;
 import data.DataProvider;
+import data.DatabaseAdapter;
 import data.UserCacheObject;
 import exceptions.UserNotFoundException;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
+import util.Configuration;
 
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
@@ -18,9 +20,9 @@ public class SocketServer extends WebSocketServer {
     private MessageHandler messageHandler;
     private DataProvider dataProvider;
 
-    public SocketServer(InetSocketAddress addr) {
+    public SocketServer(InetSocketAddress addr, Configuration c) {
         super(addr);
-        this.dataProvider = new DataProvider();
+        this.dataProvider = new DataProvider(c.getDatabaseHost(), c.getDatabasePort());
         this.messageHandler = new MessageHandler(this, dataProvider);
     }
 
@@ -44,7 +46,7 @@ public class SocketServer extends WebSocketServer {
     public void onMessage(WebSocket webSocket, String s) {
         //Echo for test purposes
         webSocket.send("Received: " + s);
-        messageHandler.receiveMessage(s);
+        messageHandler.receiveMessage(s, webSocket);
     }
 
     public void onError(WebSocket webSocket, Exception e) {

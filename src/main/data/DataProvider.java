@@ -13,9 +13,11 @@ import java.util.Set;
 public class DataProvider {
 
     public CacheManager cache;
+    public DatabaseAdapter db;
 
-    public DataProvider() {
+    public DataProvider(String dbhost, int dbport) {
         this.cache = new CacheManager();
+        this.db = new DatabaseAdapter(dbhost, dbport);
     }
 
     public UserCacheObject getUserProfile(String uid) {
@@ -23,8 +25,13 @@ public class DataProvider {
             UserCacheObject cacheObject = cache.getUser(uid);
             return cacheObject;
         } catch (UserNotFoundException ex) {
-            //Fetch from DB;
-            ex.printStackTrace();
+            try {
+                UserCacheObject obj = db.getUser(uid);
+                cache.addUser(uid, obj);
+                return obj;
+            } catch (UserNotFoundException e) {
+                e.printStackTrace();
+            }
         }
         return null;
     }

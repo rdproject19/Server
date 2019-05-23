@@ -1,6 +1,7 @@
 import com.google.common.hash.Hashing;
-import server.MessageHandler;
+
 import server.SocketServer;
+import util.Configuration;
 import util.LSFR;
 
 import java.net.InetSocketAddress;
@@ -23,7 +24,7 @@ public class Main {
 
         LSFR l = new LSFR(hash);
 
-        SocketServer s = new SocketServer(new InetSocketAddress(host, port));
+        SocketServer s = new SocketServer(new InetSocketAddress(host, port), new Configuration());
         s.run();
 
         System.out.print("a");
