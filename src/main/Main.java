@@ -1,4 +1,5 @@
 import com.google.common.hash.Hashing;
+import server.MessageHandler;
 import server.SocketServer;
 import util.LSFR;
 

@@ -1,8 +1,9 @@
 package server;
 
 import com.google.gson.Gson;
-import db.DataProvider;
+import data.DataProvider;
 import exceptions.MessageHandleException;
+import org.java_websocket.WebSocket;
 import protocol.*;
 
 public class MessageHandler {
@@ -18,17 +19,30 @@ public class MessageHandler {
         this.dataProvider = d;
     }
 
-    public void receiveMessage(String raw) {
+    /**
+     * Handles a message
+     * @param raw The raw message as it was received on the server
+     */
+    public void receiveMessage(String raw, WebSocket user) {
         BaseMessage msg = gson.fromJson(raw, BaseMessage.class);
         Class<? extends BaseMessage> msgtype = determineMessageType(msg.type);
         BaseMessage message = gson.fromJson(raw, msgtype);
         try {
-            message.handle(dataProvider);
+            if (message instanceof Handshake) {
+                ((Handshake)message).handle(dataProvider, user);
+            } else {
+                message.handle(dataProvider);
+            }
         } catch (MessageHandleException e) {
             System.out.println(e.toString());
         }
     }
 
+    /**
+     * Determines the appropriate class representation for the message according to its type
+     * @param type The type as provided in the message
+     * @return A class object corresponding with type
+     */
     public static Class<? extends BaseMessage> determineMessageType(String type) {
         switch (type) {
             case MessageTypes.MESSAGE:

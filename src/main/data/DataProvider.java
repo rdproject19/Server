@@ -1,4 +1,4 @@
-package db;
+package data;
 
 import exceptions.ConversationNotFoundException;
 import exceptions.UserNotFoundException;
@@ -36,7 +36,7 @@ public class DataProvider {
             if (cacheObject.getConnection() != null) {
                 //TODO: Implement actual message encoder. Of course, first a challenge would have to be provided
             } else {
-                //Write to db
+                //Write to data
             }
         }
     }

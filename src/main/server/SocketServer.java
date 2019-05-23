@@ -1,13 +1,12 @@
 package server;
 
 import com.google.common.hash.Hashing;
-import db.DataProvider;
-import db.UserCacheObject;
+import data.DataProvider;
+import data.UserCacheObject;
 import exceptions.UserNotFoundException;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
-import util.LSFR;
 
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;

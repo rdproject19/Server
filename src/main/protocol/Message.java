@@ -1,7 +1,7 @@
 package protocol;
 
-import db.DataProvider;
-import db.UserCacheObject;
+import data.DataProvider;
+import data.UserCacheObject;
 import server.MessageFactory;
 
 public class Message extends BaseMessage {

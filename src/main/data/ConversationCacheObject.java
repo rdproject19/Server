@@ -1,4 +1,4 @@
-package db;
+package data;
 
 import java.util.Set;
 
@@ -14,6 +14,7 @@ public class ConversationCacheObject extends CacheObject {
 
     public void addMember(UserCacheObject member) {
         System.out.println("(WARNING) No members should be added after initialisation! Update the database instead!");
+        this.members.add(member);
     }
 
     public Set<UserCacheObject> getMembers() {

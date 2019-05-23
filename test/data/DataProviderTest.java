@@ -1,4 +1,4 @@
-package db;
+package data;
 
 import com.google.common.hash.Hashing;
 

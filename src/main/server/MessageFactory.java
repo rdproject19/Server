@@ -4,6 +4,9 @@ import com.google.gson.Gson;
 import exceptions.UnknownMessageTypeException;
 import protocol.*;
 
+/**
+ * Simple message factory
+ */
 public class MessageFactory {
 
     private static final Gson gson = new Gson();
@@ -13,6 +16,12 @@ public class MessageFactory {
     private int code;
     private String messageid;
 
+    /**
+     * Set message type
+     * @param type Type of the message.
+     * @return The factory
+     * @throws UnknownMessageTypeException
+     */
     public MessageFactory setType(String type) throws UnknownMessageTypeException {
         if (type.equals(MessageTypes.RECEIPT)) {
             this.type = type;
@@ -23,22 +32,39 @@ public class MessageFactory {
         return this;
     }
 
+    /**
+     * Only when building a receipt
+     * @param code Status code to assign this message
+     * @return The factory
+     */
     public MessageFactory setStatusCode(int code) {
         if (!instance.getCanonicalName().equals("protocol.MessageReceipt")) return null;
         this.code = code;
         return this;
     }
 
+    /**
+     * Sets message id
+     * @param id The message id
+     * @return The factory
+     */
     public MessageFactory setMessageID(String id) {
         this.messageid = id;
         return this;
     }
 
+    /**
+     * @return A string json representation of the message
+     */
     public String getBody() {
         BaseMessage msg = buildMessageClass();
         return gson.toJson(msg, instance);
     }
 
+    /**
+     * Converts the factory into a class based representation
+     * @return The class based representation of the message represented in the factory
+     */
     private BaseMessage buildMessageClass() {
         switch (type) {
             case MessageTypes.MESSAGE:

@@ -1,4 +1,4 @@
-package db;
+package data;
 
 import org.java_websocket.WebSocket;
 import org.java_websocket.WebSocketImpl;

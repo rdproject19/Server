@@ -50,8 +50,11 @@ public class LSFR {
      * To convert the seed bytes to the 32 bits intial state for the LSFR
      */
     private void convertSeedToBits() {
+        //Start with empty state
         byte[] result = new byte[32];
+        //Get binary representation of seed
         byte[] stringBytes = seed.getBytes();
+        //To introduce more entropy, check if the first byte is even or odd.
         if (stringBytes[0] % 2 == 0) {
             result[0] = (byte)0xAA;
         } else {
@@ -60,8 +63,11 @@ public class LSFR {
 
         byte b;
         for (int i=0,j=0; i < 32; i++) {
+            //All bytes in the result depend on previous bytes
             b = result[j++-i];
+            //Xor with corresponding string bytes
             b ^= stringBytes[i];
+            //The string has more bytes than the states, so each state byte depends on a number of string bytes
             for (int k = 0; k < 4; k++) {
                 b ^= stringBytes[i + 32*k];
             }

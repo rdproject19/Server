@@ -1,6 +1,6 @@
 package protocol;
 
-import db.DataProvider;
+import data.DataProvider;
 import exceptions.UnknownMessageTypeException;
 
 public class UnknownMessage extends BaseMessage {

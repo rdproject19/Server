@@ -1,4 +1,4 @@
-package db;
+package data;
 
 import exceptions.ConversationNotFoundException;
 import exceptions.UserNotFoundException;
@@ -17,6 +17,11 @@ public class CacheManager {
         LSFR lsfr = new LSFR(token);
         UserCacheObject c = new UserCacheObject(id, lsfr, connection);
         userCache.put(id, c);
+    }
+
+    public void addUser(String id, WebSocket connection) {
+        //We fetch the token from the db
+        addUser(id, "a", connection);
     }
 
     public void addUser(String id, String token, long shift, WebSocket connection) {
