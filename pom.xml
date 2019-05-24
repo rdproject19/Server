@@ -5,6 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.rd</groupId>
     <artifactId>socket</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <build>
         <sourceDirectory>${basedir}/src/main</sourceDirectory>
@@ -42,6 +43,9 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>http</module>
+    </modules>
 
     <dependencies>
         <dependency>

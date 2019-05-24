@@ -2,7 +2,6 @@ package server;
 
 import com.google.common.hash.Hashing;
 import data.DataProvider;
-import data.DatabaseAdapter;
 import data.UserCacheObject;
 import exceptions.UserNotFoundException;
 import org.java_websocket.WebSocket;
