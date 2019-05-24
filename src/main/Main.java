@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 public class Main {
 
     public static void main(String[] args) {
-        final String host = "localhost";
+        final String host = "0.0.0.0";
         final int port = 7070;
 
         final String hash = Hashing.sha512()
