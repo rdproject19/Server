@@ -1,4 +1,4 @@
-package java;
+package httpserver;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
@@ -7,16 +7,19 @@ import org.bson.Document;
 
 public class DatabaseHandler {
 
-    MongoClient client;
+    private MongoClient client;
 
-    MongoDatabase users;
-    MongoDatabase connections;
+    private MongoDatabase users;
+    private MongoDatabase connections;
+    private boolean active = false;
 
     public DatabaseHandler() {
         client = MongoClients.create("mongodb://127.0.0.1:27017");
 
         users = client.getDatabase("users");
         connections = client.getDatabase("connections");
+
+        active = true;
     }
 
     public void createNewUser(String uname, String password, String nick, String token) {
@@ -29,6 +32,10 @@ public class DatabaseHandler {
         userDocument.append("shiftcount", s);
 
         users.getCollection("usercollection").insertOne(userDocument);
+    }
+
+    public boolean isActive() {
+        return active;
     }
 
 }

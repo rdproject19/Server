@@ -1,4 +1,4 @@
-package java;
+package httpserver;
 
 public class Main {
 
@@ -7,6 +7,7 @@ public class Main {
             new ServerInstance().start();
         } catch (Exception e) {
             e.printStackTrace();
+            System.exit(-1);
         }
     }
 }

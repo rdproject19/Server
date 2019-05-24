@@ -1,8 +1,11 @@
-package java;
+package httpserver;
 
+import httpserver.user.NewUserServlet;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
+import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
 
 public class ServerInstance {
 
@@ -18,8 +21,16 @@ public class ServerInstance {
 
         handler = new DatabaseHandler();
 
+        ServletContextHandler ctx = new ServletContextHandler(server, "/");
 
+        ctx.addServlet(createNewUserServlet(), "/newuser");
+
+        server.start();
     }
 
+    public ServletHolder createNewUserServlet() {
+        ServletHolder h = new ServletHolder(new NewUserServlet(handler));
+        return h;
+    }
 
 }
