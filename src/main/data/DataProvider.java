@@ -4,6 +4,7 @@ import exceptions.ConversationNotFoundException;
 import exceptions.UserNotFoundException;
 import protocol.Message;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -54,7 +55,13 @@ public class DataProvider {
             return m;
         } catch (ConversationNotFoundException ex) {
             //Fetch from DB;
+            Set<UserCacheObject> obj = new HashSet<>();
+            try {
+                obj.add(cache.getUser("koen"));
+            } catch (UserNotFoundException e) {
+                e.printStackTrace();
+            }
+            return obj;
         }
-        return null;
     }
 }
