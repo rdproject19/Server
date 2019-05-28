@@ -21,9 +21,11 @@ public class ServerInstance {
 
         handler = new DatabaseHandler();
 
-        ServletContextHandler ctx = new ServletContextHandler(server, "/");
+        ServletContextHandler ctx = new ServletContextHandler(server, "/user");
 
-        ctx.addServlet(createNewUserServlet(), "/newuser");
+        ServletContextHandler contactx = new ServletContextHandler(server, "/user/contacts");
+
+        ctx.addServlet(createNewUserServlet(), "/new");
 
         server.start();
     }
