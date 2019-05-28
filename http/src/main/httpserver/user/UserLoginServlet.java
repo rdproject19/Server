@@ -17,6 +17,7 @@ public class UserLoginServlet extends HttpServlet {
 
     /**
      * Checks user credentials
+     * URL: /user/login
      *
      * Parameters should be:
      * - uname (The user name) [string]

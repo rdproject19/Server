@@ -19,6 +19,7 @@ public class UserEditServlet extends HttpServlet {
 
     /**
      * Edits a users profile
+     * URL: /user/edit
      *
      * Parameters should be:
      * - Any parameters that need to be edited. (The same fields as when creating a new user)

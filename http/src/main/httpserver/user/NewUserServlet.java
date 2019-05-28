@@ -19,6 +19,7 @@ public class NewUserServlet extends HttpServlet {
 
     /**
      * Create a new user
+     * URL: /user/new
      *
      * Parameters should be:
      * - uname (uid for the new user) [string]

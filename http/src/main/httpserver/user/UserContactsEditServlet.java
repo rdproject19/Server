@@ -17,6 +17,7 @@ public class UserContactsEditServlet extends HttpServlet {
 
     /**
      * Edits a users contact list
+     * URL: /user/contacts/add OR /user/contacts/remove
      *
      * Parameters should be:
      * - uname (uid for the user whose contacts list is to be updated) [string]

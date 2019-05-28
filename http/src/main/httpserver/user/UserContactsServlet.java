@@ -19,6 +19,7 @@ public class UserContactsServlet extends HttpServlet {
 
     /**
      * Gets a users contacts list
+     * URL: /user/contacts
      *
      * Parameters should be:
      * - uname (uid for the user whose contacts list is to be retrieved) [string]
