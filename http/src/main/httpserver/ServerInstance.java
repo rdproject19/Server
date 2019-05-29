@@ -1,5 +1,6 @@
 package httpserver;
 
+import httpserver.conversations.ConversationCreateServlet;
 import httpserver.user.*;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
@@ -24,14 +25,14 @@ public class ServerInstance {
 
         handler = new DatabaseHandler();
 
-        ServletContextHandler uctx = new ServletContextHandler(server, "/user");
+        ServletContextHandler uctx = new ServletContextHandler(server, "/");
 
-        activateUserServlets(uctx);
+        activateServlets(uctx);
 
         server.start();
     }
 
-    private void activateUserServlets(ServletContextHandler userContext) {
+    private void activateServlets(ServletContextHandler userContext) {
         ServletHolder nus = new ServletHolder(new NewUserServlet(handler));
         ServletHolder uces = new ServletHolder(new UserContactsEditServlet(handler));
         ServletHolder ucs = new ServletHolder(new UserContactsServlet(handler));
@@ -40,14 +41,18 @@ public class ServerInstance {
         ServletHolder uls = new ServletHolder(new UserLoginServlet(handler));
         ServletHolder uuis = new ServletHolder(new UserUploadImageServlet());
 
-        userContext.addServlet(nus, "/new");
-        userContext.addServlet(ues, "/edit");
-        userContext.addServlet(ugis, "/getimage");
-        userContext.addServlet(uuis, "/image");
-        userContext.addServlet(uls, "/login");
+        userContext.addServlet(nus, "/user/new");
+        userContext.addServlet(ues, "/user/edit");
+        userContext.addServlet(ugis, "/user/getimage");
+        userContext.addServlet(uuis, "/user/image");
+        userContext.addServlet(uls, "/user/login");
 
-        userContext.addServlet(uces, "/contacts/edit");
-        userContext.addServlet(ucs, "/contacts");
+        userContext.addServlet(uces, "/user/contacts/edit");
+        userContext.addServlet(ucs, "/user/contacts");
+
+        ServletHolder ccs = new ServletHolder(new ConversationCreateServlet(handler));
+
+        userContext.addServlet(ccs, "/conversations/new");
     }
 
 }

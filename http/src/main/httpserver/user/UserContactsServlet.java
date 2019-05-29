@@ -44,18 +44,7 @@ public class UserContactsServlet extends HttpServlet {
             return;
         }
 
-        if (contacts != null) {
-            StringBuilder sb = new StringBuilder();
-            for (String s : contacts) {
-                sb.append(',');
-                sb.append(s);
-            }
-            sb.delete(0, 1);
-
-            res.getWriter().print(sb.toString());
-            res.setStatus(HttpStatus.OK_200);
-        } else {
-            res.setStatus(HttpStatus.GONE_410);
-        }
+        res.getWriter().print(String.join(",", contacts));
+        res.setStatus(HttpStatus.OK_200);
     }
 }

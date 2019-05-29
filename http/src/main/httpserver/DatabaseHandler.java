@@ -3,15 +3,12 @@ package httpserver;
 import com.mongodb.MongoTimeoutException;
 import com.mongodb.client.*;
 import org.bson.Document;
+import org.bson.types.ObjectId;
 import org.eclipse.jetty.http.HttpStatus;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-import static com.mongodb.client.model.Filters.and;
-import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Filters.*;
 import static com.mongodb.client.model.Updates.set;
 
 public class DatabaseHandler {
@@ -24,7 +21,7 @@ public class DatabaseHandler {
     private MongoClient client;
 
     private MongoDatabase users;
-    private MongoDatabase connections;
+    private MongoDatabase conversations;
     private boolean active;
 
     public DatabaseHandler() {
@@ -32,10 +29,16 @@ public class DatabaseHandler {
             client = MongoClients.create("mongodb://127.0.0.1:27017");
         } catch (MongoTimeoutException ex) {
             ex.printStackTrace();
+            System.exit(-1);
         }
 
-        users = client.getDatabase("users");
-        connections = client.getDatabase("connections");
+        try {
+            users = client.getDatabase("users");
+            conversations = client.getDatabase("conversations");
+        } catch (NullPointerException ex) {
+            ex.printStackTrace();
+            System.exit(-1);
+        }
 
         active = true;
     }
@@ -122,8 +125,59 @@ public class DatabaseHandler {
         }
     }
 
-    public int createNewConversation() {
-        return 0;
+    public int createNewConversation(String[] members, boolean group) {
+        for (String s : members) {
+            if (getUserIfExists(s) == null) return 410;
+        }
+
+        Document d = new Document();
+        d.append("isgroup", group)
+                .append("members", Arrays.asList(members));
+
+        conversations.getCollection("conversationcollection").insertOne(d);
+        return 200;
+    }
+
+    public int editConversation(String id, Document newData) {
+        Document old = getConversation(id);
+        if (old == null) return 410;
+        if (old.getBoolean("isgroup")) {
+            Set<Map.Entry<String, Object>> entries = old.entrySet();
+            for (Map.Entry e : entries) {
+                if (newData.containsKey(e.getKey())) {
+                    old.put((String) e.getKey(), newData.get(e.getKey()));
+                }
+            }
+
+            conversations.getCollection("conversationcollection").replaceOne(eq("_id", new ObjectId(id)), old);
+            return 200;
+        } else {
+            return 400;
+        }
+    }
+
+    public List<String> getConversationMembers(String gid) {
+        Document d = getConversation(gid);
+        if (d != null) {
+            return d.getList("members", String.class);
+        }
+        return null;
+    }
+
+    public boolean updateConversationMembers(String gid, List<String> membersMutation, EditAction action) {
+        List<String> currentMembers = getConversationMembers(gid);
+        if (currentMembers != null) {
+            if (action == EditAction.ADD) {
+                currentMembers.addAll(membersMutation);
+            } else {
+                currentMembers.removeAll(membersMutation);
+            }
+
+            conversations.getCollection("converstioncollection").updateOne(eq("_id", new ObjectId(gid)), set("members", currentMembers));
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public boolean isActive() {
@@ -132,6 +186,12 @@ public class DatabaseHandler {
 
     private Document getUserIfExists(String uid) {
         FindIterable<Document> f = users.getCollection("usercollection").find(eq("username", uid)).limit(1);
+        return f.first();
+    }
+
+    private Document getConversation(String gid) {
+        ObjectId id = new ObjectId(gid);
+        FindIterable<Document> f = conversations.getCollection("conversationcollection").find(eq("_id", id));
         return f.first();
     }
 
