@@ -21,7 +21,7 @@ public class UserGetImageServlet extends HttpServlet {
     }
 
     /**
-     * Upload a users profile image
+     * Get a users profile image
      * URL: /user/getimage
      *
      * Parameters should be:

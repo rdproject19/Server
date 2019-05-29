@@ -26,6 +26,8 @@ public class UserContactsServlet extends HttpServlet {
      *
      * On success:
      *  Returns a list of the users contacts, separated by commas (,). Returns a 200 (OK) status code.
+     * OR
+     *  Returns no text. Returns a 204 (NO CONTENT) status code. This likely means that the given user has no contacts
      * On failure:
      *  Returns no text. Returns a 410 (GONE) status code. This likely means that the given user does not exist.
      */
@@ -36,6 +38,12 @@ public class UserContactsServlet extends HttpServlet {
         String u = req.getParameter("uname");
 
         List<String> contacts = h.getContacts(u);
+
+        if (contacts.isEmpty()) {
+            res.setStatus(HttpStatus.NO_CONTENT_204);
+            return;
+        }
+
         if (contacts != null) {
             StringBuilder sb = new StringBuilder();
             for (String s : contacts) {
@@ -44,7 +52,7 @@ public class UserContactsServlet extends HttpServlet {
             }
             sb.delete(0, 1);
 
-            res.getWriter().println(sb.toString());
+            res.getWriter().print(sb.toString());
             res.setStatus(HttpStatus.OK_200);
         } else {
             res.setStatus(HttpStatus.GONE_410);

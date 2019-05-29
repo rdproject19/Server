@@ -19,6 +19,7 @@ public class UserContactsEditServlet extends HttpServlet {
      * Edits a users contact list
      * URL: /user/contacts/edit
      * Use a PUT request to add, a DELETE request to remove
+     * ATTENTION: Due to weird quirks, the PUT request should use body (x-www-form-urlencoded) parameters, but the DELETE request should use url parameters
      *
      * Parameters should be:
      * - uname (uid for the user whose contacts list is to be updated) [string]
@@ -26,6 +27,8 @@ public class UserContactsEditServlet extends HttpServlet {
      *
      * On success:
      *  Returns no text. Returns a 200 (OK) status code.
+     * OR
+     *  Returns no text. Returns a 304 (NOT MODIFIED) status code. This likely means that the given contact is already on the users contact list
      * On failure:
      *  Returns no text. Returns a 410 (GONE) status code. This likely means that the given user (target) does not exist.
      *  OR

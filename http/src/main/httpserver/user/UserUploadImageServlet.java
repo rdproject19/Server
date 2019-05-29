@@ -8,11 +8,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.nio.file.Paths;
 import java.util.Base64;
 
 public class UserUploadImageServlet extends HttpServlet {
 
-    private static final String PATH = "static/userimages/";
+    private static final String PATH = "/static/userimages/";
     private static final String EXTENSION = ".jpg";
 
     /**
@@ -35,8 +36,10 @@ public class UserUploadImageServlet extends HttpServlet {
         byte[] rawdata = Base64.getDecoder().decode(imgdata);
 
         try {
-            OutputStream stream = new FileOutputStream(PATH + id + EXTENSION);
+            OutputStream stream = new FileOutputStream(Paths.get(".").toAbsolutePath().normalize().toString() + PATH + id + EXTENSION);
             stream.write(rawdata);
+            stream.close();
+            stream.flush();
             res.setStatus(HttpStatus.OK_200);
         } catch (IOException ex) {
             ex.printStackTrace();

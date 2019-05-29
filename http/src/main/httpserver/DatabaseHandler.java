@@ -1,7 +1,9 @@
 package httpserver;
 
+import com.mongodb.MongoTimeoutException;
 import com.mongodb.client.*;
 import org.bson.Document;
+import org.eclipse.jetty.http.HttpStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +28,11 @@ public class DatabaseHandler {
     private boolean active;
 
     public DatabaseHandler() {
-        client = MongoClients.create("mongodb://127.0.0.1:27017");
+        try {
+            client = MongoClients.create("mongodb://127.0.0.1:27017");
+        } catch (MongoTimeoutException ex) {
+            ex.printStackTrace();
+        }
 
         users = client.getDatabase("users");
         connections = client.getDatabase("connections");
@@ -92,11 +98,12 @@ public class DatabaseHandler {
             List<String> contacts = getContacts(uid);
 
             if (contacts == null) return 202;
-            if (!contacts.contains(contactID)) return 202;
 
             if (action == EditAction.ADD) {
+                if (contacts.contains(contactID)) return 304;
                 contacts.add(contactID);
             } else if (action == EditAction.DELETE){
+                if (!contacts.contains(contactID)) return 202;
                 contacts.remove(contactID);
             }
 
