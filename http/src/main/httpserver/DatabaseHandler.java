@@ -106,6 +106,15 @@ public class DatabaseHandler {
         return 410;
     }
 
+    public String getUserImage(String uid) {
+        Document d = getUserIfExists(uid);
+        if (d != null) {
+            return (String) d.get("image");
+        } else {
+            return "";
+        }
+    }
+
     public int createNewConversation() {
         return 0;
     }
