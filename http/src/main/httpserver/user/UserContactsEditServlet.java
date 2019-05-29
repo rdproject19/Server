@@ -17,7 +17,8 @@ public class UserContactsEditServlet extends HttpServlet {
 
     /**
      * Edits a users contact list
-     * URL: /user/contacts/add OR /user/contacts/remove
+     * URL: /user/contacts/edit
+     * Use a PUT request to add, a DELETE request to remove
      *
      * Parameters should be:
      * - uname (uid for the user whose contacts list is to be updated) [string]
@@ -34,8 +35,19 @@ public class UserContactsEditServlet extends HttpServlet {
     protected void doPut(HttpServletRequest req, HttpServletResponse res)  {
         if (!h.isActive()) res.setStatus(HttpStatus.INTERNAL_SERVER_ERROR_500);
 
-        String action = req.getPathInfo().substring(1).toUpperCase();
-        DatabaseHandler.EditAction act = DatabaseHandler.EditAction.valueOf(action);
+        DatabaseHandler.EditAction act = DatabaseHandler.EditAction.ADD;
+
+        String uid = req.getParameter("uname");
+        String contact = req.getParameter("contact");
+
+        res.setStatus(h.editContacts(uid, contact, act));
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse res) {
+        if (!h.isActive()) res.setStatus(HttpStatus.INTERNAL_SERVER_ERROR_500);
+
+        DatabaseHandler.EditAction act = DatabaseHandler.EditAction.DELETE;
 
         String uid = req.getParameter("uname");
         String contact = req.getParameter("contact");
