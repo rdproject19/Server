@@ -18,6 +18,23 @@ public class ConversationMembersEditServlet extends HttpServlet {
         h = handler;
     }
 
+    /**
+     * Edits a conversations members
+     * URL: /conversations/members/edit
+     * Use a PUT request to add, a DELETE request to remove
+     * ATTENTION: Due to weird quirks, the PUT request should use body (x-www-form-urlencoded) parameters, but the DELETE request should use url parameters
+     *
+     * Parameters should be:
+     * - gid (the group id for the group) [string]
+     * - members (a list of members to be added or removed, separated by semicolons ';') [string]
+     *
+     * On success:
+     *  Returns no text. Returns a 200 (OK) status code.
+     * OR
+     *  Returns no text. Returns a 304 (NOT MODIFIED) status code. This likely means that the members list did not change because of the addition or removal of members
+     * On failure:
+     *  Returns no text. Returns a 410 (GONE) status code. This likely means that the given group id does not exist.
+     */
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse res) {
         if (!h.isActive()) res.setStatus(HttpStatus.INTERNAL_SERVER_ERROR_500);
@@ -26,11 +43,8 @@ public class ConversationMembersEditServlet extends HttpServlet {
         List<String> newmembers = Arrays.stream(req.getParameter("members").split(";"))
                 .collect(Collectors.toList());
 
-        if (h.updateConversationMembers(gid, newmembers, DatabaseHandler.EditAction.ADD)) {
-            res.setStatus(HttpStatus.OK_200);
-        } else {
-            res.setStatus(HttpStatus.GONE_410);
-        }
+        int c = h.updateConversationMembers(gid, newmembers, DatabaseHandler.EditAction.ADD);
+        res.setStatus(c);
     }
 
     @Override
@@ -41,10 +55,7 @@ public class ConversationMembersEditServlet extends HttpServlet {
         List<String> pastmembers = Arrays.stream(req.getParameter("members").split(";"))
                 .collect(Collectors.toList());
 
-        if (h.updateConversationMembers(gid, pastmembers, DatabaseHandler.EditAction.DELETE)) {
-            res.setStatus(HttpStatus.OK_200);
-        } else {
-            res.setStatus(HttpStatus.GONE_410);
-        }
+        int c = h.updateConversationMembers(gid, pastmembers, DatabaseHandler.EditAction.DELETE);
+        res.setStatus(c);
     }
 }

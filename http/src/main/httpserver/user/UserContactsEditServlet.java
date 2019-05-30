@@ -31,7 +31,7 @@ public class UserContactsEditServlet extends HttpServlet {
      *  Returns no text. Returns a 304 (NOT MODIFIED) status code. This likely means that the given contact is already on the users contact list
      * On failure:
      *  Returns no text. Returns a 410 (GONE) status code. This likely means that the given user (target) does not exist.
-     *  OR
+     * OR
      *  Returns no text. Returns a 202 (ACCEPTED) status code. This likely means that the given contact id was not on the contact list (in case of removal) or that no user associated with the given contact id exists.
      */
     @Override

@@ -1,14 +1,17 @@
 package httpserver;
 
 import com.mongodb.MongoTimeoutException;
-import com.mongodb.client.*;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.bson.types.ObjectId;
-import org.eclipse.jetty.http.HttpStatus;
 
 import java.util.*;
 
-import static com.mongodb.client.model.Filters.*;
+import static com.mongodb.client.model.Filters.and;
+import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Updates.set;
 
 public class DatabaseHandler {
@@ -116,10 +119,10 @@ public class DatabaseHandler {
         return 410;
     }
 
-    public String getUserImage(String uid) {
+    public String getUserField(String uid, String field) {
         Document d = getUserIfExists(uid);
         if (d != null) {
-            return (String) d.get("image");
+            return (String) d.get(field);
         } else {
             return "";
         }
@@ -132,7 +135,8 @@ public class DatabaseHandler {
 
         Document d = new Document();
         d.append("isgroup", group)
-                .append("members", Arrays.asList(members));
+                .append("members", Arrays.asList(members))
+                .append("image", "group_default");
 
         conversations.getCollection("conversationcollection").insertOne(d);
         return 200;
@@ -164,19 +168,36 @@ public class DatabaseHandler {
         return null;
     }
 
-    public boolean updateConversationMembers(String gid, List<String> membersMutation, EditAction action) {
+    public int updateConversationMembers(String gid, List<String> membersMutation, EditAction action) {
         List<String> currentMembers = getConversationMembers(gid);
         if (currentMembers != null) {
             if (action == EditAction.ADD) {
-                currentMembers.addAll(membersMutation);
+                if (!currentMembers.addAll(membersMutation)) return 304;
             } else {
-                currentMembers.removeAll(membersMutation);
+                if (!currentMembers.removeAll(membersMutation)) return 304;
             }
 
             conversations.getCollection("converstioncollection").updateOne(eq("_id", new ObjectId(gid)), set("members", currentMembers));
-            return true;
+            return 200;
         } else {
-            return false;
+            return 410;
+        }
+    }
+
+    public String getConversationDetails(String gid) {
+        Document d = getConversation(gid);
+        if (d != null) {
+            return d.toJson();
+        }
+        return "";
+    }
+
+    public String getConversationImage(String group) {
+        Document d = getUserIfExists(group);
+        if (d != null) {
+            return (String) d.get("image");
+        } else {
+            return "";
         }
     }
 

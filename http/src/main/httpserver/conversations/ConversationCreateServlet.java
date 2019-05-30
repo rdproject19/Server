@@ -15,6 +15,19 @@ public class ConversationCreateServlet extends HttpServlet {
         h = handler;
     }
 
+    /**
+     * Create a new conversation
+     * URL: /conversations/create
+     *
+     * Parameters should be:
+     * - members (list of members for the group, separated by semicolons ';') [string]
+     * - isgroup (whether this conversation is a group or not) [boolean]
+     *
+     * On success:
+     *  Returns no text. Returns a 200 (OK) status code.
+     * On failure:
+     *  Returns no text. Returns a 400 (BAD REQUEST) status code. This likely means that the amount of members was smaller than two, or that the amount of members did not match the given conversation type.
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) {
         if (!h.isActive()) res.setStatus(HttpStatus.INTERNAL_SERVER_ERROR_500);

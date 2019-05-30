@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.nio.charset.Charset;
 
-public class NewUserServlet extends HttpServlet {
+public class UserCreateServlet extends HttpServlet {
 
     private DatabaseHandler h;
 
-    public NewUserServlet(DatabaseHandler h) {
+    public UserCreateServlet(DatabaseHandler h) {
         this.h = h;
     }
 
@@ -41,7 +41,7 @@ public class NewUserServlet extends HttpServlet {
         String password = req.getParameter("pwd");
         String nick = req.getParameter("fullname");
         String token = Hashing.sha512().hashString(uname + password, Charset.defaultCharset()).toString();
-        String image = "user_default.jpg";
+        String image = "user_default";
         if (Boolean.parseBoolean(req.getParameter("hasimage"))) {
             image = req.getParameter("image");
         }
