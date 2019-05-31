@@ -5,6 +5,7 @@ import data.DataProvider;
 import exceptions.MessageHandleException;
 import org.java_websocket.WebSocket;
 import protocol.*;
+import protocol.Error;
 
 public class MessageHandler {
 
@@ -53,6 +54,10 @@ public class MessageHandler {
                 return AuthChallengeResponse.class;
             case MessageTypes.HANDSHAKE:
                 return Handshake.class;
+            case MessageTypes.ERROR:
+                return Error.class;
+            case MessageTypes.CONNECTION_SUCCESS:
+                return ConnectedMessage.class;
             default:
                 return UnknownMessage.class;
         }

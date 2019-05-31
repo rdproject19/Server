@@ -11,12 +11,10 @@ import protocol.Error;
 public class MessageFactory {
 
     private static final Gson gson = new Gson();
-
-    Class<? extends BaseMessage> instance;
     private String type;
     private int code;
     private String messageid;
-    private String msg;
+    private String msg = "";
 
     /**
      * Set message type
@@ -25,8 +23,9 @@ public class MessageFactory {
      * @throws UnknownMessageTypeException
      */
     public MessageFactory setType(String type) throws UnknownMessageTypeException {
-        instance = MessageHandler.determineMessageType(type);
         this.type = type;
+        Class<? extends BaseMessage> msg = MessageHandler.determineMessageType(type);
+        if (msg.getTypeName().equals("protocol.UnknownMessage")) throw new UnknownMessageTypeException(type);
         return this;
     }
 
@@ -65,7 +64,7 @@ public class MessageFactory {
      */
     public String getBody() {
         BaseMessage msg = buildMessageClass();
-        return gson.toJson(msg, instance);
+        return gson.toJson(msg, msg.getClass());
     }
 
     /**
@@ -82,6 +81,8 @@ public class MessageFactory {
                 return new AuthChallengeResponse(type);
             case MessageTypes.ERROR:
                 return new Error(type, code, msg);
+            case MessageTypes.CONNECTION_SUCCESS:
+                return new ConnectedMessage(type, code, msg);
             default:
                 return new UnknownMessage(type);
         }

@@ -9,6 +9,8 @@ import org.bson.Document;
 import util.LSFR;
 
 import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Updates.combine;
+import static com.mongodb.client.model.Updates.set;
 
 public class DatabaseAdapter {
 
@@ -49,8 +51,16 @@ public class DatabaseAdapter {
         }
     }
 
-    public void updateLSFR(LSFR l) {
-
+    public void updateLSFR(String id, LSFR l) {
+        FindIterable user = users.getCollection("usercollection").find(eq("username", id));
+        if (user.first() != null) {
+            users.getCollection("usercollection")
+                    .updateOne(eq("username", id),
+                    combine(
+                            set("state", l.getStateString()),
+                            set("shiftcount", l.getShiftCount())
+                    ));
+        }
     }
 
     private boolean initDatabases() {

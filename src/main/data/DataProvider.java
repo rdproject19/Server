@@ -18,9 +18,13 @@ public class DataProvider {
         users = new HashMap<>();
     }
 
-    public int getNewToken(String uid) throws UserNotFoundException {
+    public LSFR getLSFR(String uid) throws UserNotFoundException {
         LSFR l = db.getUserLSFR(uid);
-        return l.shift();
+        return l;
+    }
+
+    public void shiftDBToken(String id, LSFR l) {
+        db.updateLSFR(id, l);
     }
 
     public void addUser(String uid, WebSocket conn) {
