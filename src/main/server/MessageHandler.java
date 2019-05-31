@@ -51,6 +51,8 @@ public class MessageHandler {
                 return MessageReceipt.class;
             case MessageTypes.AUTHCHALLENGERESPONSE:
                 return AuthChallengeResponse.class;
+            case MessageTypes.HANDSHAKE:
+                return Handshake.class;
             default:
                 return UnknownMessage.class;
         }

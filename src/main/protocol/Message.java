@@ -24,7 +24,7 @@ public class Message extends BaseMessage {
     @Override
     public void handle(DataProvider dp) {
         //Retrieve current token and compare;
-        UserConnection obj = dp.getUserProfile(this.uid);
+        /*UserConnection obj = dp.getUserProfile(this.uid);
         obj.shiftLSFR();
         int serverToken = obj.getToken();
         MessageFactory fac = null;
@@ -41,6 +41,6 @@ public class Message extends BaseMessage {
             obj.getConnection().send(fac.setStatusCode(200).getBody());
         } else {
             obj.getConnection().send(fac.setStatusCode(409).getBody());
-        }
+        }*/
     }
 }

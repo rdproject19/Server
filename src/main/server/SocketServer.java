@@ -27,7 +27,7 @@ public class SocketServer extends WebSocketServer {
     }
 
     public void onOpen(WebSocket webSocket, ClientHandshake clientHandshake) {
-
+        System.out.println("Connected new client");
     }
 
     public void onClose(WebSocket webSocket, int i, String s, boolean b) {

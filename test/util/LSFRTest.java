@@ -11,13 +11,9 @@ class LSFRTest {
 
     @Test
     public void testShift() {
-        final String hash = Hashing.sha512()
-                .hashString("gewgwegwwgegwghwewegwwherhjerhjer", StandardCharsets.UTF_8)
-                .toString();
+        final String hash = "d74ae9d6ffc8e695699240e505965a74d523dfa992bab535340b57888a33134cb42b1069a2baa6a3c16298a07b0a385161110dcdc3b29f98078f9216e11b3993";
 
         LSFR l = new LSFR(hash);
-        for (int i = 0; i < 10; i++) {
-            System.out.println(l.shift());
-        }
+        System.out.print(l.shift());
     }
 }

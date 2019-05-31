@@ -25,12 +25,8 @@ public class MessageFactory {
      * @throws UnknownMessageTypeException
      */
     public MessageFactory setType(String type) throws UnknownMessageTypeException {
-        if (type.equals(MessageTypes.RECEIPT)) {
-            this.type = type;
-            instance = MessageHandler.determineMessageType(type);
-        } else {
-            throw new UnknownMessageTypeException(type);
-        }
+        instance = MessageHandler.determineMessageType(type);
+        this.type = type;
         return this;
     }
 
@@ -85,7 +81,7 @@ public class MessageFactory {
             case MessageTypes.AUTHCHALLENGERESPONSE:
                 return new AuthChallengeResponse(type);
             case MessageTypes.ERROR:
-                return new Error(type);
+                return new Error(type, code, msg);
             default:
                 return new UnknownMessage(type);
         }
