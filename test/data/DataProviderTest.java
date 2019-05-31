@@ -23,8 +23,8 @@ class DataProviderTest {
 
     @Test
     public void testGetUserProfile() {
-        //UserCacheObject obj = provider.getUserProfile("koen");
-        //UserCacheObject obj2 = provider.getUserProfile("k");
+        //UserConnection obj = provider.getUserProfile("koen");
+        //UserConnection obj2 = provider.getUserProfile("k");
         //assertNotNull(obj);
         //assertNull(obj2);
     }

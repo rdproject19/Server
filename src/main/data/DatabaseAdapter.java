@@ -4,12 +4,11 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
-import static com.mongodb.client.model.Filters.*;
-
-import exceptions.ConversationNotFoundException;
 import exceptions.UserNotFoundException;
 import org.bson.Document;
 import util.LSFR;
+
+import static com.mongodb.client.model.Filters.eq;
 
 public class DatabaseAdapter {
 
@@ -31,27 +30,27 @@ public class DatabaseAdapter {
         }
     }
 
-    public UserCacheObject getUser(String uid) throws UserNotFoundException {
+    public LSFR getUserLSFR(String uid) throws UserNotFoundException {
         FindIterable it = users.getCollection("usercollection").find(eq("username", uid));
         Document user = (Document) it.first();
         if (user != null) {
-            String token = user.getString("token");
-            LSFR l = new LSFR(token, user.getLong("shiftcount"));
-            return new UserCacheObject(uid, l, null);
+            if (user.containsKey("state")) {
+                String stateString = user.getString("state");
+                byte[] b = stateString.getBytes();
+                long shiftcount = user.getLong("shiftcount");
+
+                return new LSFR(b, shiftcount);
+            } else {
+                String token = user.getString("token");
+                return new LSFR(token);
+            }
         } else {
             throw new UserNotFoundException(uid);
         }
     }
 
-    public ConversationCacheObject getConversation(String gid) throws ConversationNotFoundException {
-        FindIterable it = conversations.getCollection("conversationcollection").find(eq("_id", gid));
-        Document user = (Document) it.first();
-        if (user != null) {
+    public void updateLSFR(LSFR l) {
 
-        } else {
-
-        }
-        return null;
     }
 
     private boolean initDatabases() {

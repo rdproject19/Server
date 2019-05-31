@@ -24,6 +24,11 @@ public class LSFR {
         }
     }
 
+    public LSFR(byte[] state, long shift) {
+        this.state = state;
+        shiftcounter = shift;
+    }
+
     /**
      * Shifts the LSFR by one position
      * @return The new state of the LSFR as an Integer

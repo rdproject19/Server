@@ -1,67 +1,32 @@
 package data;
 
-import exceptions.ConversationNotFoundException;
 import exceptions.UserNotFoundException;
-import protocol.Message;
+import org.java_websocket.WebSocket;
+import util.LSFR;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-import java.util.HashSet;
-import java.util.Set;
-
-/**
- * Manages data I/O.
- * I.E. Checks if requested items are cached, and if not, fetches them from the database.
- */
 public class DataProvider {
 
-    public CacheManager cache;
-    public DatabaseAdapter db;
+    DatabaseAdapter db;
 
-    public DataProvider(String dbhost, int dbport) {
-        this.cache = new CacheManager();
-        this.db = new DatabaseAdapter(dbhost, dbport);
+    Map<String, UserConnection> users;
+
+    public DataProvider(DatabaseAdapter databaseAdapter) {
+        this.db = databaseAdapter;
+        users = new HashMap<>();
     }
 
-    public UserCacheObject getUserProfile(String uid) {
-        try {
-            UserCacheObject cacheObject = cache.getUser(uid);
-            return cacheObject;
-        } catch (UserNotFoundException ex) {
-            try {
-                UserCacheObject obj = db.getUser(uid);
-                cache.addUser(uid, obj);
-                return obj;
-            } catch (UserNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
-        return null;
+    public int getNewToken(String uid) throws UserNotFoundException {
+        LSFR l = db.getUserLSFR(uid);
+        return l.shift();
     }
 
-    public void enqueueMessage(Message message) {
-        Set<UserCacheObject> recipients = getConversationMembers(message.convid);
-        for (UserCacheObject u : recipients) {
-            UserCacheObject cacheObject = getUserProfile(message.uid);
-            if (cacheObject.getConnection() != null) {
-                //TODO: Implement actual message encoder. Of course, first a challenge would have to be provided
-            } else {
-                //Write to data
-            }
-        }
-    }
+    public void addUser(String uid, WebSocket conn) {
+        UserConnection uconn = new UserConnection(conn);
+        uconn.setAuthenticated();
 
-    public Set<UserCacheObject> getConversationMembers(String cid) {
-        try {
-            Set<UserCacheObject> m = cache.getConversationMembers(cid);
-            return m;
-        } catch (ConversationNotFoundException ex) {
-            //Fetch from DB;
-            Set<UserCacheObject> obj = new HashSet<>();
-            try {
-                obj.add(cache.getUser("koen"));
-            } catch (UserNotFoundException e) {
-                e.printStackTrace();
-            }
-            return obj;
-        }
+        users.put(uid, uconn);
     }
 }

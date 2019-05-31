@@ -3,6 +3,7 @@ package server;
 import com.google.gson.Gson;
 import exceptions.UnknownMessageTypeException;
 import protocol.*;
+import protocol.Error;
 
 /**
  * Simple message factory
@@ -15,6 +16,7 @@ public class MessageFactory {
     private String type;
     private int code;
     private String messageid;
+    private String msg;
 
     /**
      * Set message type
@@ -38,7 +40,6 @@ public class MessageFactory {
      * @return The factory
      */
     public MessageFactory setStatusCode(int code) {
-        if (!instance.getCanonicalName().equals("protocol.MessageReceipt")) return null;
         this.code = code;
         return this;
     }
@@ -50,6 +51,16 @@ public class MessageFactory {
      */
     public MessageFactory setMessageID(String id) {
         this.messageid = id;
+        return this;
+    }
+
+    /**
+     * Sets the message (for errors)
+     * @param msg msg the error
+     * @return The factory
+     */
+    public MessageFactory setMessageString(String msg) {
+        this.msg = msg;
         return this;
     }
 
@@ -73,6 +84,8 @@ public class MessageFactory {
                 return new MessageReceipt(this.messageid, this.code);
             case MessageTypes.AUTHCHALLENGERESPONSE:
                 return new AuthChallengeResponse(type);
+            case MessageTypes.ERROR:
+                return new Error(type);
             default:
                 return new UnknownMessage(type);
         }

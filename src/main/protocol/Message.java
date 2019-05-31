@@ -1,7 +1,7 @@
 package protocol;
 
 import data.DataProvider;
-import data.UserCacheObject;
+import data.UserConnection;
 import server.MessageFactory;
 
 import java.util.Set;
@@ -24,7 +24,7 @@ public class Message extends BaseMessage {
     @Override
     public void handle(DataProvider dp) {
         //Retrieve current token and compare;
-        UserCacheObject obj = dp.getUserProfile(this.uid);
+        UserConnection obj = dp.getUserProfile(this.uid);
         obj.shiftLSFR();
         int serverToken = obj.getToken();
         MessageFactory fac = null;
