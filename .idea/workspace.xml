@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abe1aa20-8abd-47b0-b081-037592d27678" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/src/main/httpserver/DatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/http/src/main/httpserver/DatabaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/http/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,14 +44,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/DatabaseHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="147" column="52" selection-start-line="147" selection-start-column="52" selection-end-line="147" selection-end-column="52" />
+            <state relative-caret-position="176">
+              <caret line="138" column="52" selection-start-line="138" selection-start-column="52" selection-end-line="138" selection-end-column="52" />
               <folding>
                 <element signature="e#6930#6931#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/http/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="953">
+              <caret line="71" column="12" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="44" column="12" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="44" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -74,24 +91,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/UserContactsServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -166,7 +165,6 @@
         <option value="$PROJECT_DIR$/http/src/main/java/ServerInstance.java" />
         <option value="$PROJECT_DIR$/http/src/main/java/httpserver/Main.java" />
         <option value="$PROJECT_DIR$/http/src/main/httpserver/NewUserServlet.java" />
-        <option value="$PROJECT_DIR$/http/pom.xml" />
         <option value="$PROJECT_DIR$/http/src/main/httpserver/user/LoginServlet.java" />
         <option value="$PROJECT_DIR$/http/src/main/httpserver/conversations/UpdateConversationServlet.java" />
         <option value="$PROJECT_DIR$/http/src/main/httpserver/Main.java" />
@@ -190,6 +188,7 @@
         <option value="$PROJECT_DIR$/http/src/main/httpserver/Authenticator.java" />
         <option value="$PROJECT_DIR$/http/src/main/httpserver/ServerInstance.java" />
         <option value="$PROJECT_DIR$/http/src/main/httpserver/DatabaseHandler.java" />
+        <option value="$PROJECT_DIR$/http/pom.xml" />
       </list>
     </option>
   </component>
@@ -637,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559290546653</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Queue for conversations">
+      <created>1559290868872</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1559290868872</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -673,7 +679,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53065000" />
+    <option name="totallyTimeSpent" value="53677000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -818,7 +824,8 @@
     <MESSAGE value="Small edit" />
     <MESSAGE value="-Tested and optimized all user servlets -&gt; WORKING" />
     <MESSAGE value="Token needs to be updated on password change" />
-    <option name="LAST_COMMIT_MESSAGE" value="Token needs to be updated on password change" />
+    <MESSAGE value="Queue for conversations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Queue for conversations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1051,13 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/http/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/http.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1083,13 +1083,6 @@
     <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/ContactsServlet.java" />
     <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/LoginServlet.java" />
     <entry file="file://$PROJECT_DIR$/http/test/httpserver/user/NewUserServletTest.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/NewUserServlet.java" />
     <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/UserLoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1218,11 +1211,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/DatabaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="147" column="52" selection-start-line="147" selection-start-column="52" selection-end-line="147" selection-end-column="52" />
+        <state relative-caret-position="176">
+          <caret line="138" column="52" selection-start-line="138" selection-start-column="52" selection-end-line="138" selection-end-column="52" />
           <folding>
             <element signature="e#6930#6931#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="44" column="12" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="44" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="953">
+          <caret line="71" column="12" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
         </state>
       </provider>
     </entry>
