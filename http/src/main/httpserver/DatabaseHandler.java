@@ -1,5 +1,6 @@
 package httpserver;
 
+import com.google.common.hash.Hashing;
 import com.mongodb.MongoTimeoutException;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoClient;
@@ -8,6 +9,7 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
+import java.nio.charset.Charset;
 import java.util.*;
 
 import static com.mongodb.client.model.Filters.and;
@@ -71,6 +73,12 @@ public class DatabaseHandler {
             Set<Map.Entry<String, Object>> entries = old.entrySet();
             for (Map.Entry e : entries) {
                 if (newData.containsKey(e.getKey())) {
+                    if (e.getKey().equals("password")) {
+                        //Token needs to be updated
+                        String pwd = (String)e.getValue();
+                        String token = Hashing.sha512().hashString(uid + pwd, Charset.defaultCharset()).toString();
+                        old.put("token", token);
+                    }
                     old.put((String) e.getKey(), newData.get(e.getKey()));
                 }
             }

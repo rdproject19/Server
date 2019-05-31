@@ -3,6 +3,7 @@ package httpserver;
 import httpserver.common.ImageServlet;
 import httpserver.conversations.*;
 import httpserver.user.*;
+import org.eclipse.jetty.security.SecurityHandler;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;

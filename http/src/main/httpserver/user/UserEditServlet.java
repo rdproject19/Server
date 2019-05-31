@@ -23,7 +23,7 @@ public class UserEditServlet extends HttpServlet {
      *
      * Parameters should be:
      * - Any parameters that need to be edited. (The same fields as when creating a new user)
-     *   EXCEPT: field 'hasimage' is not accepted.
+     *   EXCEPT: fields 'hasimage' and 'token' are not accepted.
      *
      * On success:
      *  Returns no text. Returns a 200 (OK) status code.
@@ -40,7 +40,7 @@ public class UserEditServlet extends HttpServlet {
         Enumeration<String> params = req.getParameterNames();
         while (params.hasMoreElements()) {
             String param = params.nextElement();
-            if (param.equals("hasimage")) {
+            if (param.equals("hasimage") || param.equals("token")) {
                 res.setStatus(HttpStatus.BAD_REQUEST_400);
                 return;
             }
