@@ -144,8 +144,11 @@ public class DatabaseHandler {
         Document d = new Document();
         d.append("isgroup", group)
                 .append("members", Arrays.asList(members))
-                .append("image", "group_default")
                 .append("queue", new ArrayList<>());
+
+        if (group) {
+            d.append("image", "group_default");
+        }
 
         conversations.getCollection("conversationcollection").insertOne(d);
         return 200;
