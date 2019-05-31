@@ -1,10 +1,14 @@
 import com.google.common.hash.Hashing;
 
+import org.xml.sax.SAXException;
 import server.SocketServer;
 import util.Configuration;
 import util.LSFR;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 
 public class Main {
@@ -24,7 +28,14 @@ public class Main {
 
         LSFR l = new LSFR(hash);
 
-        SocketServer s = new SocketServer(new InetSocketAddress(host, port), new Configuration());
+        SocketServer s = null;
+        try {
+            s = new SocketServer(new InetSocketAddress(host, port), new Configuration());
+        } catch (ParserConfigurationException | SAXException | IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
         s.run();
 
         System.out.print("a");

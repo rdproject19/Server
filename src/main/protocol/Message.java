@@ -4,14 +4,18 @@ import data.DataProvider;
 import data.UserCacheObject;
 import server.MessageFactory;
 
+import java.util.Set;
+
 public class Message extends BaseMessage {
 
     public String id;
     public String uid;
     public String convid;
     int token;
-    long timestamp;
+    public long timestamp;
     String body;
+
+    public Set<String> receivedBy;
 
     public Message(String type) {
         super(type);

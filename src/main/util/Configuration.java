@@ -8,16 +8,19 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 public class Configuration {
 
     Document document;
 
-    public Configuration() throws ParserConfigurationException, IOException, SAXException {
+    public Configuration() throws ParserConfigurationException, IOException, SAXException, URISyntaxException {
         File file = new File("config.xml");
         if (!file.exists()) {
             System.out.println("Config file not found; Using default values...");
-            file = new File(getClass().getClassLoader().getResource("resources.config.xml").getFile());
+            URL url = getClass().getResource("src\\main\\resources\\config.xml");
+            file = new File(url.getFile());
         }
         DocumentBuilderFactory fac = DocumentBuilderFactory.newInstance();
         DocumentBuilder b = fac.newDocumentBuilder();

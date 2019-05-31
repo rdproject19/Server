@@ -6,6 +6,7 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 import static com.mongodb.client.model.Filters.*;
 
+import exceptions.ConversationNotFoundException;
 import exceptions.UserNotFoundException;
 import org.bson.Document;
 import util.LSFR;
@@ -31,7 +32,7 @@ public class DatabaseAdapter {
     }
 
     public UserCacheObject getUser(String uid) throws UserNotFoundException {
-        FindIterable it = users.getCollection("usercollection").find(eq("uid", uid));
+        FindIterable it = users.getCollection("usercollection").find(eq("username", uid));
         Document user = (Document) it.first();
         if (user != null) {
             String token = user.getString("token");
@@ -40,6 +41,17 @@ public class DatabaseAdapter {
         } else {
             throw new UserNotFoundException(uid);
         }
+    }
+
+    public ConversationCacheObject getConversation(String gid) throws ConversationNotFoundException {
+        FindIterable it = conversations.getCollection("conversationcollection").find(eq("_id", gid));
+        Document user = (Document) it.first();
+        if (user != null) {
+
+        } else {
+
+        }
+        return null;
     }
 
     private boolean initDatabases() {
