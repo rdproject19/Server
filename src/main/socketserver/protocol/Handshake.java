@@ -1,14 +1,13 @@
-package protocol;
+package socketserver.protocol;
 
-import data.DataProvider;
-import data.UserConnection;
-import exceptions.UnknownMessageTypeException;
-import exceptions.UserNotFoundException;
 import org.java_websocket.WebSocket;
-import server.MessageFactory;
-import util.LSFR;
+import socketserver.data.DataProvider;
+import socketserver.exceptions.UnknownMessageTypeException;
+import socketserver.exceptions.UserNotFoundException;
+import socketserver.server.MessageFactory;
+import socketserver.util.LSFR;
 
-public class Handshake extends BaseMessage {
+public class Handshake extends socketserver.protocol.BaseMessage {
 
     public String USER_ID;
     public int AUTHENTICATION_TOKEN;
@@ -31,7 +30,7 @@ public class Handshake extends BaseMessage {
                 //NO
                 conn.send(
                     new MessageFactory().
-                        setType(MessageTypes.ERROR).
+                        setType(socketserver.protocol.MessageTypes.ERROR).
                         setStatusCode(401).
                         setMessageString("Tokens didn't match").
                         getBody()
@@ -42,7 +41,7 @@ public class Handshake extends BaseMessage {
             try {
                 conn.send(
                         new MessageFactory().
-                                setType(MessageTypes.ERROR).
+                                setType(socketserver.protocol.MessageTypes.ERROR).
                                 setStatusCode(404).
                                 setMessageString("User not found").
                                 getBody()

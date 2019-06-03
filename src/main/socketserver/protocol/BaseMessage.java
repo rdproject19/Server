@@ -1,8 +1,8 @@
-package protocol;
+package socketserver.protocol;
 
-import data.DataProvider;
-import exceptions.BaseTypeHandleException;
-import exceptions.MessageHandleException;
+import socketserver.data.DataProvider;
+import socketserver.exceptions.BaseTypeHandleException;
+import socketserver.exceptions.MessageHandleException;
 
 public class BaseMessage {
     public String type;

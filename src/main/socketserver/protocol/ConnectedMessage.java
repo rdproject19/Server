@@ -1,4 +1,4 @@
-package protocol;
+package socketserver.protocol;
 
 public class ConnectedMessage extends BaseMessage {
 

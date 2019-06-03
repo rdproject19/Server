@@ -1,6 +1,6 @@
-package protocol;
+package socketserver.protocol;
 
-import data.DataProvider;
+import socketserver.data.DataProvider;
 
 public class MessageReceipt extends BaseMessage {
 

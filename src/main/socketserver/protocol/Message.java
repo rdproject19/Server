@@ -1,8 +1,6 @@
-package protocol;
+package socketserver.protocol;
 
-import data.DataProvider;
-import data.UserConnection;
-import server.MessageFactory;
+import socketserver.data.DataProvider;
 
 import java.util.Set;
 

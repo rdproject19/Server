@@ -1,4 +1,4 @@
-package data;
+package socketserver.data;
 
 import org.junit.jupiter.api.Test;
 

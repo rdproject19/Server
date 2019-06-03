@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <build>
-        <sourceDirectory>${basedir}/src/main</sourceDirectory>
+        <sourceDirectory>${basedir}/src/main/socketserver</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -34,7 +34,7 @@
                             </descriptorRefs>
                             <archive>
                                 <manifest>
-                                    <mainClass>Main</mainClass>
+                                    <mainClass>socketserver.Main</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>
@@ -43,9 +43,6 @@
             </plugin>
         </plugins>
     </build>
-    <modules>
-        <module>http</module>
-    </modules>
 
     <dependencies>
         <dependency>

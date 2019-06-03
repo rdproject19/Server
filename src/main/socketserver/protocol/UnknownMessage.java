@@ -1,7 +1,7 @@
-package protocol;
+package socketserver.protocol;
 
-import data.DataProvider;
-import exceptions.UnknownMessageTypeException;
+import socketserver.data.DataProvider;
+import socketserver.exceptions.UnknownMessageTypeException;
 
 public class UnknownMessage extends BaseMessage {
 

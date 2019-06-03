@@ -1,9 +1,7 @@
-package server;
+package socketserver.server;
 
-import exceptions.UnknownMessageTypeException;
+import socketserver.exceptions.UnknownMessageTypeException;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class MessageFactoryTest {
 

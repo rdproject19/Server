@@ -88,7 +88,7 @@ public class ImageServlet extends HttpServlet {
      * Parameters should be:
      * - type (what image should be retrieved. allowed values are 'group', or 'user') [string]
      * - id (id for the group or user) [string]
-     * - data (the image, encoded in base64) [string]
+     * - socketserver.data (the image, encoded in base64) [string]
      *
      * On success:
      *  Returns no text. Returns a 200 (OK) status code.
@@ -103,7 +103,7 @@ public class ImageServlet extends HttpServlet {
 
         String type = req.getParameter("type");
         String id = req.getParameter("id");
-        String imgdata = req.getParameter("data");
+        String imgdata = req.getParameter("socketserver.data");
         byte[] rawdata = Base64.getDecoder().decode(imgdata);
 
         String imageid = UUID.randomUUID().toString() + "_" + id; //Adding id guarantees uniqueness. Using random UUID ensures static sweeping is not possible.

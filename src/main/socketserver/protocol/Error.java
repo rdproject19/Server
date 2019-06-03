@@ -1,6 +1,6 @@
-package protocol;
+package socketserver.protocol;
 
-public class Error extends BaseMessage {
+public class Error extends socketserver.protocol.BaseMessage {
 
     int code;
     String message;

@@ -5,18 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abe1aa20-8abd-47b0-b081-037592d27678" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/protocol/ConnectedMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/server/MessageFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http/http.iml" beforeDir="false" afterPath="$PROJECT_DIR$/http/http.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/data/DataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/data/DataProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/data/DatabaseAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/data/DatabaseAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/Handshake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/protocol/Handshake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/MessageTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/protocol/MessageTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server/MessageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/server/MessageFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/server/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/server/MessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/util/LSFR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/util/LSFR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/protocol/MessageTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/protocol/MessageTypes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/http/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/src/main/httpserver/common/ImageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/http/src/main/httpserver/common/ImageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/socket.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/protocol/AuthChallengeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/AuthChallengeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/protocol/BaseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/BaseMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/protocol/ConnectedMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/ConnectedMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/protocol/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/Error.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/protocol/Handshake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/Handshake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/protocol/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/protocol/MessageReceipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/MessageReceipt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/protocol/UnknownMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/UnknownMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/BaseTypeHandleException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/Configuration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/ConversationNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/DataProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/DatabaseAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/LSFR.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/MessageFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/MessageHandleException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/MessageHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/MessageTypes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/SocketServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/UnknownMessageTypeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/UserConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/UserNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/protocol/MessageTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/data/CacheTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/socketserver/data/CacheTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/data/DataProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/socketserver/data/DataProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/data/DatabaseAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/socketserver/data/DatabaseAdapterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/server/MessageFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/socketserver/server/MessageFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/util/LSFRTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/socketserver/util/LSFRTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,28 +56,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/protocol/Error.java">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/MessageTypes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/protocol/ConnectedMessage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/server/MessageHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+            <state relative-caret-position="153">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,36 +77,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/protocol/Handshake.java">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+            <state relative-caret-position="-187">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/data/DataProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#589#590#0" expanded="true" />
-                <element signature="e#620#621#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/data/DatabaseAdapter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/util/Configuration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="60" column="64" selection-start-line="60" selection-start-column="64" selection-end-line="60" selection-end-column="64" />
+            <state relative-caret-position="307">
+              <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,34 +110,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/util/Configuration.java">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/BaseMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="68">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/util/LSFR.java">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/ConnectedMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="90" column="28" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
-              <folding>
-                <element signature="e#2291#2292#0" expanded="true" />
-                <element signature="e#2330#2331#0" expanded="true" />
-                <element signature="e#2370#2371#0" expanded="true" />
-                <element signature="e#2391#2392#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/protocol/MessageTypes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -149,12 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/http/HttpMain.java" />
-        <option value="$PROJECT_DIR$/http/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/http/src/main/java/DatabaseHandler.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/http/src/main/java/user/NewUserServlet.java" />
-        <option value="$PROJECT_DIR$/http/src/main/java/ServerInstance.java" />
         <option value="$PROJECT_DIR$/http/src/main/java/httpserver/Main.java" />
         <option value="$PROJECT_DIR$/http/src/main/httpserver/NewUserServlet.java" />
         <option value="$PROJECT_DIR$/http/src/main/httpserver/user/LoginServlet.java" />
@@ -200,13 +188,19 @@
         <option value="$PROJECT_DIR$/src/main/data/DataProvider.java" />
         <option value="$PROJECT_DIR$/src/main/util/LSFR.java" />
         <option value="$PROJECT_DIR$/src/main/data/DatabaseAdapter.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/protocol/MessageTypes.java" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/util/Configuration.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="951" />
+    <option name="width" value="975" />
+    <option name="height" value="1049" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -214,115 +208,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="httpserver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="httpserver" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="httpserver" type="462c0819:PsiDirectoryNode" />
-              <item name="conversations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="httpserver" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="protocol" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -351,21 +248,22 @@
       <recent name="util" />
       <recent name="db" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="exceptions" />
-      <recent name="db" />
-      <recent name="protocol" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ji\Documents\rdproject\server\src\resources" />
+      <recent name="C:\Users\Ji\Documents\rdproject\server\src\main\util" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="socketserver" />
       <recent name="" />
       <recent name="util" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Ji\Documents\rdproject\server\src\resources" />
-      <recent name="C:\Users\Ji\Documents\rdproject\server\src\main\util" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="exceptions" />
+      <recent name="db" />
+      <recent name="protocol" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -380,7 +278,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Maven.socket [package]">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="httpserver.Main" />
       <module name="http" />
@@ -395,7 +293,7 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="socketserver.Main" />
       <module name="socket" />
       <method v="2">
         <option name="RunConfigurationTask" enabled="true" run_configuration_name="DataProviderTest" run_configuration_type="JUnit" />
@@ -432,12 +330,12 @@
       <module name="socket" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data.*" />
+          <option name="PATTERN" value="socketserver.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="data" />
-      <option name="MAIN_CLASS_NAME" value="data.DataProviderTest" />
+      <option name="PACKAGE_NAME" value="socketserver.data" />
+      <option name="MAIN_CLASS_NAME" value="socketserver.data.DataProviderTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -447,12 +345,12 @@
       <module name="socket" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data.*" />
+          <option name="PATTERN" value="socketserver.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="data" />
-      <option name="MAIN_CLASS_NAME" value="data.DatabaseAdapterTest" />
+      <option name="PACKAGE_NAME" value="socketserver.data" />
+      <option name="MAIN_CLASS_NAME" value="socketserver.data.DatabaseAdapterTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -462,12 +360,12 @@
       <module name="socket" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="util.*" />
+          <option name="PATTERN" value="socketserver.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="util" />
-      <option name="MAIN_CLASS_NAME" value="util.LSFRTest" />
+      <option name="PACKAGE_NAME" value="socketserver.util" />
+      <option name="MAIN_CLASS_NAME" value="socketserver.util.LSFRTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -477,12 +375,12 @@
       <module name="socket" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="util.*" />
+          <option name="PATTERN" value="socketserver.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="util" />
-      <option name="MAIN_CLASS_NAME" value="util.LSFRTest" />
+      <option name="PACKAGE_NAME" value="socketserver.util" />
+      <option name="MAIN_CLASS_NAME" value="socketserver.util.LSFRTest" />
       <option name="METHOD_NAME" value="testShift" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -493,12 +391,12 @@
       <module name="socket" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="server.*" />
+          <option name="PATTERN" value="socketserver.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="server" />
-      <option name="MAIN_CLASS_NAME" value="server.MessageFactoryTest" />
+      <option name="PACKAGE_NAME" value="socketserver.server" />
+      <option name="MAIN_CLASS_NAME" value="socketserver.server.MessageFactoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -614,16 +512,15 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Azure Web App.Azure Web App: socket:socket" />
+      <item itemvalue="Application.Main (1)" />
       <item itemvalue="JUnit.DataProviderTest" />
       <item itemvalue="JUnit.LSFRTest" />
       <item itemvalue="JUnit.DatabaseAdapterTest" />
       <item itemvalue="JUnit.LSFRTest.testShift" />
+      <item itemvalue="JUnit.MessageFactoryTest" />
       <item itemvalue="Maven.http [package]" />
       <item itemvalue="Maven.http [install]" />
       <item itemvalue="Maven.socket [package]" />
-      <item itemvalue="Application.Main (1)" />
-      <item itemvalue="JUnit.MessageFactoryTest" />
     </list>
     <recent_temporary>
       <list>
@@ -663,6 +560,9 @@
       <workItem from="1558703573330" duration="841000" />
       <workItem from="1559121500781" duration="9166000" />
       <workItem from="1559304780232" duration="498000" />
+      <workItem from="1559564326089" duration="227000" />
+      <workItem from="1559565511614" duration="166000" />
+      <workItem from="1559571442930" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="Added more stuff for data management">
       <created>1558432897929</created>
@@ -840,7 +740,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66926000" />
+    <option name="totallyTimeSpent" value="67607000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -852,10 +752,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.18550107" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.32550335" />
       <window_info id="Structure" order="1" sideWeight="0.50165015" side_tool="true" weight="0.29850745" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -865,7 +765,7 @@
       <window_info id="Azure Explorer" order="7" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49597314" visible="true" weight="0.32555556" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49597314" weight="0.3243626" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" weight="0.39777777" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -873,9 +773,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49731544" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49731544" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50402683" side_tool="true" weight="0.32577905" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49731544" weight="0.32666665" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49731544" weight="0.32577905" />
       <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" order="13" />
       <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="14" />
       <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" order="15" />
@@ -996,43 +896,43 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/server/MessageHandler.java</url>
+          <url>file://$PROJECT_DIR$/src/main/socketserver/MessageHandler.java</url>
           <line>27</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/server/MessageHandler.java</url>
+          <url>file://$PROJECT_DIR$/src/main/socketserver/MessageHandler.java</url>
           <line>28</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/server/MessageHandler.java</url>
+          <url>file://$PROJECT_DIR$/src/main/socketserver/MessageHandler.java</url>
           <line>61</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/server/MessageHandler.java</url>
+          <url>file://$PROJECT_DIR$/src/main/socketserver/MessageHandler.java</url>
           <line>47</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/server/MessageHandler.java</url>
+          <url>file://$PROJECT_DIR$/src/main/socketserver/MessageHandler.java</url>
           <line>49</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/server/MessageHandler.java</url>
+          <url>file://$PROJECT_DIR$/src/main/socketserver/MessageHandler.java</url>
           <line>51</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/server/MessageHandler.java</url>
+          <url>file://$PROJECT_DIR$/src/main/socketserver/MessageHandler.java</url>
           <line>53</line>
           <properties />
           <option name="timeStamp" value="12" />
@@ -1045,32 +945,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/jdk-11.0.1/lib/src.zip!/java.base/sun/nio/ch/SocketChannelImpl.java" />
-    <entry file="file://$PROJECT_DIR$/http/http.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/UpdateUserServlet.java" />
-    <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/conversations/UpdateConversationServlet.java" />
-    <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/ContactsServlet.java" />
-    <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/LoginServlet.java" />
-    <entry file="file://$PROJECT_DIR$/http/test/httpserver/user/NewUserServletTest.java" />
-    <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/NewUserServlet.java" />
-    <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/UserLoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/jdk-11.0.1/lib/src.zip!/java.base/jdk/internal/loader/BuiltinClassLoader.java" />
-    <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/UserGetImageServlet.java" />
-    <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/conversations/ConversationServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/UserUploadImageServlet.java" />
     <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/conversations/ConversationEditServlet.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1161,74 +1035,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/data/ConversationCacheObject.java" />
     <entry file="file://$PROJECT_DIR$/src/main/data/CacheObject.java" />
     <entry file="file://$PROJECT_DIR$/src/main/data/CacheManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/protocol/MessageReceipt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/UserConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding>
-            <element signature="e#217#218#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/config.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/server/SocketServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="39" column="52" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/util/LSFRTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/SocketServer.java" />
     <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/UserGetNameServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -1256,16 +1063,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/protocol/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/common/ImageServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1276,38 +1073,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/protocol/MessageTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/protocol/Error.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/protocol/ConnectedMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/server/MessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/server/MessageFactoryTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/MessageTypes.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/MessageHandler.java" />
+    <entry file="file://$PROJECT_DIR$/test/socketserver/server/MessageFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
@@ -1317,65 +1085,144 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/server/MessageFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/MessageFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/Configuration.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/LSFR.java" />
+    <entry file="file://$PROJECT_DIR$/test/socketserver/util/LSFRTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="24" column="83" lean-forward="true" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="83" />
+        <state relative-caret-position="170">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/DatabaseAdapter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/DataProvider.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/UserConnection.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/BaseTypeHandleException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/ConversationNotFoundException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/MessageHandleException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/UnknownMessageTypeException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/UserNotFoundException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Error.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/AuthChallengeResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Handshake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/protocol/Handshake.java">
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/util/Configuration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/MessageReceipt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/util/LSFR.java">
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/UnknownMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="90" column="28" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
-          <folding>
-            <element signature="e#2291#2292#0" expanded="true" />
-            <element signature="e#2330#2331#0" expanded="true" />
-            <element signature="e#2370#2371#0" expanded="true" />
-            <element signature="e#2391#2392#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/DataProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/BaseMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#620#621#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/data/DatabaseAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/ConnectedMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="60" column="64" selection-start-line="60" selection-start-column="64" selection-end-line="60" selection-end-column="64" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/MessageTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/config.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/util/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
         </state>
       </provider>
     </entry>

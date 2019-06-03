@@ -1,9 +1,10 @@
-import com.google.common.hash.Hashing;
+package socketserver;
 
+import com.google.common.hash.Hashing;
 import org.xml.sax.SAXException;
-import server.SocketServer;
-import util.Configuration;
-import util.LSFR;
+import socketserver.server.SocketServer;
+import socketserver.util.Configuration;
+import socketserver.util.LSFR;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;

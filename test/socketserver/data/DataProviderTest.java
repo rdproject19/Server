@@ -1,4 +1,4 @@
-package data;
+package socketserver.data;
 
 import com.google.common.hash.Hashing;
 
