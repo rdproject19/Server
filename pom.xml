@@ -23,7 +23,7 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>bundle</id>
+                        <id>make-assembly</id>
                         <phase>package</phase>
                         <goals>
                             <goal>single</goal>
@@ -34,6 +34,8 @@
                             </descriptorRefs>
                             <archive>
                                 <manifest>
+                                    <addClasspath>true</addClasspath>
+                                    <classpathPrefix>socketserver</classpathPrefix>
                                     <mainClass>socketserver.Main</mainClass>
                                 </manifest>
                             </archive>

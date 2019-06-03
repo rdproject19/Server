@@ -34,8 +34,6 @@ public class Main {
             s = new SocketServer(new InetSocketAddress(host, port), new Configuration());
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
         }
         s.run();
 

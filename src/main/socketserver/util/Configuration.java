@@ -16,7 +16,7 @@ public class Configuration {
     private Document document;
     private boolean noconfig;
 
-    public Configuration() throws ParserConfigurationException, IOException, SAXException, URISyntaxException {
+    public Configuration() throws ParserConfigurationException, IOException, SAXException {
         File file = new File("config.xml");
         if (!file.exists()) {
             System.out.println("Config file not found; Using default values...");

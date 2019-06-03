@@ -4,42 +4,12 @@
     <bookmark url="file://$PROJECT_DIR$/http/src/main/httpserver/DatabaseHandler.java" line="97" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abe1aa20-8abd-47b0-b081-037592d27678" name="Default Changelist" comment="">
+    <list default="true" id="abe1aa20-8abd-47b0-b081-037592d27678" name="Default Changelist" comment="It should compile every time now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/http.iml" beforeDir="false" afterPath="$PROJECT_DIR$/http/http.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/http/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/src/main/httpserver/common/ImageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/http/src/main/httpserver/common/ImageServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/socket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/socket.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/AuthChallengeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/AuthChallengeResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/BaseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/BaseMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/ConnectedMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/ConnectedMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/Error.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/Handshake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/Handshake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/MessageReceipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/MessageReceipt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/protocol/UnknownMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/UnknownMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/BaseTypeHandleException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/Configuration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/ConversationNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/DataProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/DatabaseAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/LSFR.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/MessageFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/MessageHandleException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/MessageHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/MessageTypes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/SocketServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/UnknownMessageTypeException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/UserConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/UserNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/protocol/MessageTypes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/data/CacheTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/socketserver/data/CacheTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/data/DataProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/socketserver/data/DataProviderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/data/DatabaseAdapterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/socketserver/data/DatabaseAdapterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/server/MessageFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/socketserver/server/MessageFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/util/LSFRTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/socketserver/util/LSFRTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/util/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/util/Configuration.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -80,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-187">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/util/Configuration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+            <state relative-caret-position="221">
+              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -100,11 +70,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="19" selection-end-column="19" />
+            <state relative-caret-position="137">
+              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="73" column="9" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -188,12 +176,12 @@
         <option value="$PROJECT_DIR$/src/main/data/DataProvider.java" />
         <option value="$PROJECT_DIR$/src/main/util/LSFR.java" />
         <option value="$PROJECT_DIR$/src/main/data/DatabaseAdapter.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/socketserver/Main.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/MessageTypes.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/util/Configuration.java" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/Main.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -214,6 +202,45 @@
             <path>
               <item name="socket" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="socketserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="socketserver" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="socketserver" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -562,7 +589,7 @@
       <workItem from="1559304780232" duration="498000" />
       <workItem from="1559564326089" duration="227000" />
       <workItem from="1559565511614" duration="166000" />
-      <workItem from="1559571442930" duration="309000" />
+      <workItem from="1559571442930" duration="1576000" />
     </task>
     <task id="LOCAL-00001" summary="Added more stuff for data management">
       <created>1558432897929</created>
@@ -704,7 +731,28 @@
       <option name="project" value="LOCAL" />
       <updated>1559302261260</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="It should compile every time now">
+      <created>1559571804222</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1559571804222</updated>
+    </task>
+    <task id="LOCAL-00022" summary="It should compile every time now">
+      <created>1559571979120</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1559571979120</updated>
+    </task>
+    <task id="LOCAL-00023" summary="It should compile every time now">
+      <created>1559572061060</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1559572061060</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -740,7 +788,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67607000" />
+    <option name="totallyTimeSpent" value="68874000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -755,7 +803,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.32550335" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.32550335" />
       <window_info id="Structure" order="1" sideWeight="0.50165015" side_tool="true" weight="0.29850745" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -773,7 +821,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49731544" visible="true" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49731544" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50402683" side_tool="true" weight="0.32577905" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49731544" weight="0.32577905" />
       <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" order="13" />
@@ -890,7 +938,8 @@
     <MESSAGE value="Image only for groups" />
     <MESSAGE value="Configuration" />
     <MESSAGE value="Redid pretty much the entire socket server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Redid pretty much the entire socket server" />
+    <MESSAGE value="It should compile every time now" />
+    <option name="LAST_COMMIT_MESSAGE" value="It should compile every time now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -945,7 +994,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/user/UserUploadImageServlet.java" />
     <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/conversations/ConversationEditServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -1165,16 +1213,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/MessageTypes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1202,17 +1240,10 @@
     <entry file="file://$PROJECT_DIR$/src/resources/config.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-187">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1221,8 +1252,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/util/Configuration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+        <state relative-caret-position="221">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="73" column="9" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
         </state>
       </provider>
     </entry>
