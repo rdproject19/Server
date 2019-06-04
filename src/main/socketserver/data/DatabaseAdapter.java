@@ -12,9 +12,11 @@ import socketserver.exceptions.UserNotFoundException;
 import socketserver.util.LSFR;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Filters.in;
 import static com.mongodb.client.model.Updates.*;
 
 public class DatabaseAdapter {
@@ -100,12 +102,30 @@ public class DatabaseAdapter {
         }
     }
 
-    public void queueMessage(String id, UserQueueObject data) {
-        users.getCollection("usercollection").updateOne(eq("username", id), addToSet("queue", data));
+    public void queueMessage(String[] ids, UserQueueObject data) {
+        Document d = data.toDocument();
+        conversations.getCollection("queue").insertOne(d);
+
+        ObjectId oid = d.getObjectId("_id");
+
+        users.getCollection("usercollection").updateMany(in("username", ids), addToSet("queue", oid));
     }
 
     public List<UserQueueObject> getQueue(String id) {
-        return users.getCollection("usercollection").find(eq("username", id)).first().getList("queue", UserQueueObject.class);
+        List<ObjectId> queued = users.getCollection("usercollection").find(eq("username", id)).first().getList("queue", ObjectId.class);
+        List<UserQueueObject> result = new ArrayList<>();
+
+        for (ObjectId oid : queued) {
+            Document d = conversations.getCollection("queue").find(eq("_id", oid)).first();
+            UserQueueObject queueObject = UserQueueObject.fromDocument(d);
+            if (queueObject.receivedByAll()) {
+                conversations.getCollection("queue").deleteOne(eq("_id", oid));
+            } else {
+                conversations.getCollection("queue").updateOne(eq("_id", oid), inc("received", 1));
+            }
+        }
+
+        return result;
     }
 
     private boolean initDatabases() {

@@ -17,29 +17,33 @@ public class Configuration {
         File file = new File("config.xml");
         if (!file.exists()) {
             System.out.println("Config file not found; Using default values...");
-            file = new File(getClass().getResource("config.xml").getFile());
+            //file = new File(getClass().getResource("config.xml").getFile());
         } else {
             System.out.println("Config loaded...");
         }
-        DocumentBuilderFactory fac = DocumentBuilderFactory.newInstance();
-        DocumentBuilder b = fac.newDocumentBuilder();
-        document = b.parse(file);
+        //DocumentBuilderFactory fac = DocumentBuilderFactory.newInstance();
+        //DocumentBuilder b = fac.newDocumentBuilder();
+        //document = b.parse(file);
     }
 
     public String getDatabaseHost() {
-        return document.getElementsByTagName("dbhost").item(0).getTextContent();
+        return "127.0.0.1";
+        //return document.getElementsByTagName("dbhost").item(0).getTextContent();
     }
 
     public int getDatabasePort() {
-        String txtversion = document.getElementsByTagName("dbport").item(0).getTextContent();
-        return Integer.parseInt(txtversion);
+        return 27017;
+        //String txtversion = document.getElementsByTagName("dbport").item(0).getTextContent();
+        //return Integer.parseInt(txtversion);
     }
 
     public String getServerHost() {
-        return document.getElementsByTagName("serverhost").item(0).getTextContent();
+        return "0.0.0.0";
+        //return document.getElementsByTagName("serverhost").item(0).getTextContent();
     }
 
     public int getServerPort() {
-        return Integer.parseInt(document.getElementsByTagName("serverport").item(0).getTextContent());
+        return 7070;
+        //return Integer.parseInt(document.getElementsByTagName("serverport").item(0).getTextContent());
     }
 }

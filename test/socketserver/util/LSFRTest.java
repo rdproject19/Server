@@ -6,9 +6,9 @@ class LSFRTest {
 
     @Test
     public void testShift() {
-        final String hash = "d74ae9d6ffc8e695699240e505965a74d523dfa992bab535340b57888a33134cb42b1069a2baa6a3c16298a07b0a385161110dcdc3b29f98078f9216e11b3993";
+        final String hash = "f759f3ef9aaf84d812a13f3aadb31ee882c3d9a8a79d9fcc8dd38eb1c5fc91232707e66822dbe43e893b67eac2468dcfd4283cf4537afdf5d90294f472308a42";
 
-        LSFR l = new LSFR(hash);
+        LSFR l = new LSFR(hash, 0);
         System.out.print(l.shift());
     }
 }

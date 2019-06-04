@@ -25,7 +25,8 @@ public class SocketServer extends WebSocketServer {
     }
 
     public void onClose(WebSocket webSocket, int i, String s, boolean b) {
-
+        System.out.println("Disconnected client for reason: " + i + " - " + s);
+        dataProvider.removeUser(webSocket);
     }
 
     public void onMessage(WebSocket webSocket, String s) {

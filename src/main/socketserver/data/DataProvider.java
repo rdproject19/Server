@@ -1,6 +1,7 @@
 package socketserver.data;
 
 import org.java_websocket.WebSocket;
+import org.java_websocket.WebSocketImpl;
 import socketserver.exceptions.ConversationNotFoundException;
 import socketserver.exceptions.UnknownMessageTypeException;
 import socketserver.exceptions.UserNotFoundException;
@@ -52,6 +53,15 @@ public class DataProvider {
         return null;
     }
 
+    public void removeUser(WebSocket socket) {
+        for (String id : users.keySet()) {
+            UserConnection c = users.get(id);
+            if (c.getConnection().hashCode() == socket.hashCode()) {
+                users.remove(id);
+            }
+        }
+    }
+
     public Conversation getConversation(String convID) throws ConversationNotFoundException {
         if (conversations.containsKey(convID)) {
             return conversations.get(convID);
@@ -60,9 +70,11 @@ public class DataProvider {
         }
     }
 
-    public void enqueueMessage(String recipient, Message message) {
+    public void enqueueMessage(String[] recipient, Message message) {
+        if (recipient.length == 0) return;
+
         //No need to check if users exists, that was already verified
-        UserQueueObject<Message> queueObject = new UserQueueObject<>("message", message);
+        UserQueueObject queueObject = new UserQueueObject("message", recipient.length, message);
         db.queueMessage(recipient, queueObject);
     }
 
