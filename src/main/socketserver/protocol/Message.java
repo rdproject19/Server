@@ -1,44 +1,49 @@
 package socketserver.protocol;
 
 import socketserver.data.DataProvider;
+import socketserver.data.UserConnection;
+import socketserver.exceptions.ConversationNotFoundException;
+import socketserver.exceptions.UnknownMessageTypeException;
+import socketserver.exceptions.UserNotFoundException;
+import socketserver.server.MessageFactory;
 
-import java.util.Set;
+import java.util.List;
 
 public class Message extends BaseMessage {
 
     public String id;
     public String uid;
     public String convid;
-    int token;
     public long timestamp;
     String body;
-
-    public Set<String> receivedBy;
 
     public Message(String type) {
         super(type);
     }
 
     @Override
-    public void handle(DataProvider dp) {
-        //Retrieve current token and compare;
-        /*UserConnection obj = dp.getUserProfile(this.uid);
-        obj.shiftLSFR();
-        int serverToken = obj.getToken();
-        MessageFactory fac = null;
-        try {
-            fac = new MessageFactory().setType("receipt")
-                    .setMessageID(this.id);
-        } catch (Exception e) {
-            e.printStackTrace();
+    public void handle(DataProvider dp) throws UserNotFoundException, UnknownMessageTypeException {
+        UserConnection conn = dp.getUser(uid);
+        if (conn == null) {
             return;
         }
-        if (this.token > 0) {
-            //Success
-            dp.enqueueMessage(this);
-            obj.getConnection().send(fac.setStatusCode(200).getBody());
-        } else {
-            obj.getConnection().send(fac.setStatusCode(409).getBody());
-        }*/
+
+        try {
+            List<String> recipients = dp.getConversation(convid).getMembers();
+
+            for (String r : recipients) {
+               UserConnection recipientConnection = dp.getUser(uid);
+               if (recipientConnection == null) {
+                   //Enqueue message
+                    dp.enqueueMessage(r, this);
+               } else {
+                   //Send right away
+                   conn.getConnection().send(MessageFactory.fromProtocolObject(this));
+               }
+            }
+
+        } catch (ConversationNotFoundException e) {
+            conn.getConnection().send(new MessageFactory().setType("error").setStatusCode(404).setMessageString("Conversation not found").getBody());
+        }
     }
 }

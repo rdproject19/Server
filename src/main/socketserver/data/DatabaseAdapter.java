@@ -5,12 +5,16 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
+import org.bson.types.ObjectId;
+import socketserver.exceptions.ConversationNotFoundException;
 import socketserver.exceptions.UserNotFoundException;
+import socketserver.protocol.Message;
 import socketserver.util.LSFR;
 
+import java.util.List;
+
 import static com.mongodb.client.model.Filters.eq;
-import static com.mongodb.client.model.Updates.combine;
-import static com.mongodb.client.model.Updates.set;
+import static com.mongodb.client.model.Updates.*;
 
 public class DatabaseAdapter {
 
@@ -61,6 +65,24 @@ public class DatabaseAdapter {
                             set("shiftcount", l.getShiftCount())
                     ));
         }
+    }
+
+    public void userExists(String uid) throws UserNotFoundException {
+        FindIterable user = users.getCollection("usercollection").find(eq("username", uid));
+        if (user.first() == null) throw new UserNotFoundException(uid);
+    }
+
+    public Conversation getConversation(String gid) throws ConversationNotFoundException {
+        FindIterable conv = conversations.getCollection("conversationcollection").find(eq("_id", new ObjectId(gid)));
+        if (conv.first() == null) {
+            throw new ConversationNotFoundException(gid);
+        } else {
+            return Conversation.fromDocument((Document) conv.first());
+        }
+    }
+
+    public void queueMessage(String id, Message message) {
+        conversations.getCollection("usercollection").updateOne(eq("username", id), addToSet("queue", message));
     }
 
     private boolean initDatabases() {

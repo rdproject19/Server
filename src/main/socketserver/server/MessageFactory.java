@@ -68,6 +68,16 @@ public class MessageFactory {
     }
 
     /**
+     * If something can be directly echoed (like a message), this function can be used to turn a class into json
+     * @param object The object to be serialized
+     * @param <T> Must extends BaseMessage
+     * @return JSON representation of the provided object
+     */
+    public static <T extends BaseMessage> String fromProtocolObject(T object) {
+        return gson.toJson(object);
+    }
+
+    /**
      * Converts the factory into a class based representation
      * @return The class based representation of the message represented in the factory
      */

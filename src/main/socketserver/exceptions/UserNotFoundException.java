@@ -1,6 +1,6 @@
 package socketserver.exceptions;
 
-public class UserNotFoundException extends Exception {
+public class UserNotFoundException extends MessageHandleException {
     private String uid;
     public UserNotFoundException(String uid) {
         this.uid = uid;

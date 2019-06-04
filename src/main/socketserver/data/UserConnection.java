@@ -6,8 +6,11 @@ public class UserConnection {
     private WebSocket connection;
     private boolean authenticated;
 
+    private boolean active;
+
     public UserConnection(WebSocket socket) {
         this.connection = socket;
+        active = true;
     }
 
     public void setAuthenticated() {
@@ -21,4 +24,7 @@ public class UserConnection {
     public boolean isAuthenticated() {
         return authenticated;
     }
+
+    public boolean isActive() {return active;}
+    public void setActive(boolean val) {this.active = val;}
 }
