@@ -14,6 +14,7 @@ import java.util.*;
 
 import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Updates.addToSet;
 import static com.mongodb.client.model.Updates.set;
 
 public class DatabaseHandler {
@@ -136,9 +137,9 @@ public class DatabaseHandler {
         }
     }
 
-    public int createNewConversation(String[] members, boolean group) {
+    public Document createNewConversation(String[] members, boolean group) {
         for (String s : members) {
-            if (getUserIfExists(s) == null) return 410;
+            if (getUserIfExists(s) == null) return null;
         }
 
         Document d = new Document();
@@ -151,7 +152,7 @@ public class DatabaseHandler {
         }
 
         conversations.getCollection("conversationcollection").insertOne(d);
-        return 200;
+        return d;
     }
 
     public int editConversation(String id, Document newData) {
@@ -213,8 +214,23 @@ public class DatabaseHandler {
         }
     }
 
+    public void enqueueUserConversationUpdates(String[] targets, Conversation c) {
+        UserQueueObject<Conversation> queueObject = new UserQueueObject<>("conversation", c);
+
+        //Users already exist, no need to verify
+        for (String t : targets) {
+            users.getCollection("usercollection").updateOne(eq("username", t), addToSet("queue", queueObject));
+        }
+    }
+
     public boolean isActive() {
         return active;
+    }
+
+    public Document getConversation(String gid) {
+        ObjectId id = new ObjectId(gid);
+        FindIterable<Document> f = conversations.getCollection("conversationcollection").find(eq("_id", id));
+        return f.first();
     }
 
     private Document getUserIfExists(String uid) {
@@ -222,10 +238,5 @@ public class DatabaseHandler {
         return f.first();
     }
 
-    private Document getConversation(String gid) {
-        ObjectId id = new ObjectId(gid);
-        FindIterable<Document> f = conversations.getCollection("conversationcollection").find(eq("_id", id));
-        return f.first();
-    }
 
 }

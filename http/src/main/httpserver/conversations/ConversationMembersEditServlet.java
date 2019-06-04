@@ -1,5 +1,6 @@
 package httpserver.conversations;
 
+import httpserver.Conversation;
 import httpserver.DatabaseHandler;
 import org.eclipse.jetty.http.HttpStatus;
 
@@ -44,6 +45,12 @@ public class ConversationMembersEditServlet extends HttpServlet {
                 .collect(Collectors.toList());
 
         int c = h.updateConversationMembers(gid, newmembers, DatabaseHandler.EditAction.ADD);
+
+        if (c == 200) {
+            Conversation conversation = Conversation.fromDocument(h.getConversation(gid));
+            h.enqueueUserConversationUpdates((String[]) newmembers.toArray(), conversation);
+        }
+
         res.setStatus(c);
     }
 
