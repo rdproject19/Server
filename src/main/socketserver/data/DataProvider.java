@@ -8,6 +8,7 @@ import socketserver.protocol.Message;
 import socketserver.server.MessageFactory;
 import socketserver.util.LSFR;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -76,7 +77,16 @@ public class DataProvider {
 
         for (UserQueueObject q : toAdd) {
             if (q.getType().equals("message")) {
-                messages.add((Message) q.getData());
+                Message m = (Message) q.getData();
+                //If the message is the delayed
+                if (m.DELAYED) {
+                    //If we're currently at or past the sending time, send the message
+                    if (Instant.now().getEpochSecond() >= m.SEND_AT) {
+                        messages.add(m);
+                    }
+                } else {
+                    messages.add(m);
+                }
             } else if (q.getType().equals("conversation")) {
                 conversations.add((Conversation) q.getData());
             }

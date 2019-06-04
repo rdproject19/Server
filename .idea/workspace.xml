@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="abe1aa20-8abd-47b0-b081-037592d27678" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/socketserver/protocol/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/Message.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -25,8 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+            <state relative-caret-position="250">
+              <caret line="74" column="61" lean-forward="true" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+            <state relative-caret-position="321">
+              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,12 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/DesyncMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="221">
               <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-              <folding>
-                <element signature="e#120#121#0" expanded="true" />
-                <element signature="e#147#148#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -72,11 +69,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-              <folding>
-                <element signature="e#2690#2691#0" expanded="true" />
-                <element signature="e#2732#2733#0" expanded="true" />
-              </folding>
+              <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -84,7 +77,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
+            <state relative-caret-position="1156">
               <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
             </state>
           </provider>
@@ -103,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/SocketServer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
               <folding>
                 <element signature="e#1315#1316#0" expanded="true" />
                 <element signature="e#1379#1380#0" expanded="true" />
@@ -116,7 +109,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Error.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -124,7 +117,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
+            <state relative-caret-position="969">
               <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -193,20 +186,20 @@
         <option value="$PROJECT_DIR$/src/main/socketserver/Main.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/Error.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/MessageTypes.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/DesyncMessage.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/MessageReceipt.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/server/MessageFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/Message.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+    <option name="x" value="-10" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -725,7 +718,8 @@
       <workItem from="1559571442930" duration="2032000" />
       <workItem from="1559630809843" duration="818000" />
       <workItem from="1559631652984" duration="12729000" />
-      <workItem from="1559647364507" duration="4508000" />
+      <workItem from="1559647364507" duration="4534000" />
+      <workItem from="1559654047325" duration="408000" />
     </task>
     <task id="LOCAL-00001" summary="Added more stuff for data management">
       <created>1558432897929</created>
@@ -1014,7 +1008,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559651041362</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Shouldn't send to sender">
+      <created>1559651989009</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1559651989010</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1050,7 +1051,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87385000" />
+    <option name="totallyTimeSpent" value="87819000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1065,7 +1066,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.24026845" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.24362417" />
       <window_info id="Structure" order="1" sideWeight="0.50165015" side_tool="true" weight="0.29850745" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1182,7 +1183,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="-Tested and optimized all user servlets -&gt; WORKING" />
     <MESSAGE value="Token needs to be updated on password change" />
     <MESSAGE value="Queue for conversations" />
     <MESSAGE value="maven again" />
@@ -1207,7 +1207,8 @@
     <MESSAGE value="Made the erver exit a little more gracefully" />
     <MESSAGE value="Added desync support" />
     <MESSAGE value="Message id is int" />
-    <option name="LAST_COMMIT_MESSAGE" value="Message id is int" />
+    <MESSAGE value="Shouldn't send to sender" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shouldn't send to sender" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1511,21 +1512,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/DesyncMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="221">
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="e#120#121#0" expanded="true" />
-            <element signature="e#147#148#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1536,6 +1526,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/MessageReceipt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1543,31 +1547,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-          <folding>
-            <element signature="e#2690#2691#0" expanded="true" />
-            <element signature="e#2732#2733#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/SocketServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
           <folding>
             <element signature="e#1315#1316#0" expanded="true" />
             <element signature="e#1379#1380#0" expanded="true" />
@@ -1578,14 +1561,24 @@
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Error.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+        <state relative-caret-position="250">
+          <caret line="74" column="61" lean-forward="true" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1594,8 +1587,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+        <state relative-caret-position="321">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

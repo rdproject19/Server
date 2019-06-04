@@ -16,6 +16,8 @@ public class Message extends BaseMessage {
     int MESSAGE_ID;
     long TIMESTAMP;
     String MESSAGE;
+    public boolean DELAYED;
+    public long SEND_AT = 0;
 
     public Message(String type) {
         super(type);
@@ -28,18 +30,31 @@ public class Message extends BaseMessage {
             return;
         }
 
+        if (DELAYED) {
+            if (SEND_AT == 0) {
+                conn.getConnection().send(new MessageFactory().setType("error").
+                        setStatusCode(400).
+                        setMessageString("Message was delayed, but no delivery time was specified").
+                        getBody());
+                return;
+            }
+        }
+
         try {
             List<String> recipients = dp.getConversation(CONVERSATION_ID).getMembers();
 
             for (String r : recipients) {
-                if (r.equals(SENDER_ID)) continue;
+               if (r.equals(SENDER_ID)) continue;
+
                UserConnection recipientConnection = dp.getUser(SENDER_ID);
                if (recipientConnection == null) {
                    //Enqueue message
                     dp.enqueueMessage(r, this);
                } else {
                    //Send right away
-                   recipientConnection.getConnection().send(MessageFactory.fromProtocolObject(this));
+                   if (!DELAYED) {
+                       recipientConnection.getConnection().send(MessageFactory.fromProtocolObject(this));
+                   }
                }
             }
 
