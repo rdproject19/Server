@@ -17,9 +17,9 @@ public class MessageFactory {
     private String type;
     private int code;
     private String msg = "";
+    private String messageid;
     private List<Conversation> newconv;
     private List<Message> newmessg;
-
     /**
      * Set message type
      * @param type Type of the message.
@@ -73,6 +73,11 @@ public class MessageFactory {
         return this;
     }
 
+    public MessageFactory setMessageID(String messageID) {
+        this.messageid = messageID;
+        return this;
+    }
+
     /**
      * @return A string json representation of the message
      */
@@ -105,6 +110,8 @@ public class MessageFactory {
                 return new Error(type, code, msg);
             case MessageTypes.CONNECTION_SUCCESS:
                 return new ConnectedMessage(type, code, msg);
+            case MessageTypes.RECEIPT:
+                return new MessageReceipt(type, messageid);
             default:
                 return new UnknownMessage(type);
         }

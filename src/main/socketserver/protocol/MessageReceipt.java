@@ -5,22 +5,14 @@ import socketserver.data.DataProvider;
 public class MessageReceipt extends BaseMessage {
 
     public String MessageID;
-    public String UserID;
-    public int code;
 
-    public MessageReceipt(String mid, String uid, int code) {
-        super(MessageTypes.RECEIPT);
+    public MessageReceipt(String type, String mid) {
+        super(type);
         this.MessageID = mid;
-        this.UserID = uid;
-        this.code = code;
-    }
-
-    public MessageReceipt(String mid, int code) {
-        this(mid, "", code);
     }
 
     @Override
     public void handle(DataProvider dp) {
-
+        //Do we even have to do something?
     }
 }

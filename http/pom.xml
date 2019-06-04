@@ -53,7 +53,7 @@
                             </descriptorRefs>
                             <archive>
                                 <manifest>
-                                    <mainClass>httpserver/socketserver.Main</mainClass>
+                                    <mainClass>httpserver.Main</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>

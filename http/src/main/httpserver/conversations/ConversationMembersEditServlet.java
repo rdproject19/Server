@@ -29,6 +29,8 @@ public class ConversationMembersEditServlet extends HttpServlet {
      * - gid (the group id for the group) [string]
      * - members (a list of members to be added or removed, separated by semicolons ';') [string]
      *
+     * Also enqueues an update for the new members
+     *
      * On success:
      *  Returns no text. Returns a 200 (OK) status code.
      * OR

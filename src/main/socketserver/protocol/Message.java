@@ -13,6 +13,7 @@ public class Message extends BaseMessage {
 
     public String SENDER_ID;
     public String CONVERSATION_ID;
+    String MESSAGE_ID;
     long TIMESTAMP;
     String MESSAGE;
 
@@ -37,10 +38,12 @@ public class Message extends BaseMessage {
                     dp.enqueueMessage(r, this);
                } else {
                    //Send right away
-                   conn.getConnection().send(MessageFactory.fromProtocolObject(this));
+                   recipientConnection.getConnection().send(MessageFactory.fromProtocolObject(this));
                }
             }
 
+            //Send confirmation
+            conn.getConnection().send(new MessageFactory().setType("receipt").setMessageID(MESSAGE_ID).getBody());
         } catch (ConversationNotFoundException e) {
             conn.getConnection().send(new MessageFactory().setType("error").setStatusCode(404).setMessageString("Conversation not found").getBody());
         }
