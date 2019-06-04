@@ -23,11 +23,11 @@ public class DataProvider {
     public DataProvider(DatabaseAdapter databaseAdapter) {
         this.db = databaseAdapter;
         users = new HashMap<>();
+        conversations = new HashMap<>();
     }
 
     public LSFR getLSFR(String uid) throws UserNotFoundException {
-        LSFR l = db.getUserLSFR(uid);
-        return l;
+        return db.getUserLSFR(uid);
     }
 
     public void shiftDBToken(String id, LSFR l) {

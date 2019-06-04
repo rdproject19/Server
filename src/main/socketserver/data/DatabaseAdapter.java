@@ -8,7 +8,6 @@ import org.bson.Document;
 import org.bson.types.ObjectId;
 import socketserver.exceptions.ConversationNotFoundException;
 import socketserver.exceptions.UserNotFoundException;
-import socketserver.protocol.Message;
 import socketserver.util.LSFR;
 
 import java.util.List;

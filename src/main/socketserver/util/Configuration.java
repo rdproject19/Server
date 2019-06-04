@@ -8,20 +8,18 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
 
 public class Configuration {
 
     private Document document;
-    private boolean noconfig;
 
     public Configuration() throws ParserConfigurationException, IOException, SAXException {
         File file = new File("config.xml");
         if (!file.exists()) {
             System.out.println("Config file not found; Using default values...");
-            noconfig = true;
-            return;
+            file = new File(getClass().getResource("config.xml").getFile());
+        } else {
+            System.out.println("Config loaded...");
         }
         DocumentBuilderFactory fac = DocumentBuilderFactory.newInstance();
         DocumentBuilder b = fac.newDocumentBuilder();
@@ -29,13 +27,19 @@ public class Configuration {
     }
 
     public String getDatabaseHost() {
-        if (noconfig) return "127.0.0.1";
         return document.getElementsByTagName("dbhost").item(0).getTextContent();
     }
 
     public int getDatabasePort() {
-        if (noconfig) return 27017;
         String txtversion = document.getElementsByTagName("dbport").item(0).getTextContent();
         return Integer.parseInt(txtversion);
+    }
+
+    public String getServerHost() {
+        return document.getElementsByTagName("serverhost").item(0).getTextContent();
+    }
+
+    public int getServerPort() {
+        return Integer.parseInt(document.getElementsByTagName("serverport").item(0).getTextContent());
     }
 }

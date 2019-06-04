@@ -2,4 +2,6 @@
 <config>
     <dbhost>127.0.0.1</dbhost>
     <dbport>27017</dbport>
+    <serverhost>0.0.0.0</serverhost>
+    <serverport>7070</serverport>
 </config>
