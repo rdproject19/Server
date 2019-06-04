@@ -32,6 +32,7 @@ public class Message extends BaseMessage {
             List<String> recipients = dp.getConversation(CONVERSATION_ID).getMembers();
 
             for (String r : recipients) {
+                if (r.equals(SENDER_ID)) continue;
                UserConnection recipientConnection = dp.getUser(SENDER_ID);
                if (recipientConnection == null) {
                    //Enqueue message
