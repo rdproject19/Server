@@ -14,11 +14,6 @@
     <dependencies>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-socketserver.server</artifactId>
-            <version>[9.3.24.v20180605,)</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-servlet</artifactId>
             <version>LATEST</version>
         </dependency>
