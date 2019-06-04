@@ -17,7 +17,7 @@ public class MessageFactory {
     private String type;
     private int code;
     private String msg = "";
-    private String messageid;
+    private int messageid;
     private List<Conversation> newconv;
     private List<Message> newmessg;
     /**
@@ -73,7 +73,7 @@ public class MessageFactory {
         return this;
     }
 
-    public MessageFactory setMessageID(String messageID) {
+    public MessageFactory setMessageID(int messageID) {
         this.messageid = messageID;
         return this;
     }

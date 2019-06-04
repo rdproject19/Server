@@ -13,7 +13,7 @@ public class Message extends BaseMessage {
 
     public String SENDER_ID;
     public String CONVERSATION_ID;
-    String MESSAGE_ID;
+    int MESSAGE_ID;
     long TIMESTAMP;
     String MESSAGE;
 

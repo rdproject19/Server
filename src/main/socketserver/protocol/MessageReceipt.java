@@ -4,9 +4,9 @@ import socketserver.data.DataProvider;
 
 public class MessageReceipt extends BaseMessage {
 
-    public String MessageID;
+    int MessageID;
 
-    public MessageReceipt(String type, String mid) {
+    public MessageReceipt(String type, int mid) {
         super(type);
         this.MessageID = mid;
     }

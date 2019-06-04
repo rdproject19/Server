@@ -13,6 +13,7 @@ public class DesyncMessage extends BaseMessage {
 
     @Override
     public void handle(DataProvider dp) {
+        System.out.println("");
         dp.resetDBToken(USER_ID, COUNT);
     }
 }
