@@ -10,6 +10,8 @@ import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
+import java.io.File;
+
 public class ServerInstance {
 
     Server server;
@@ -23,6 +25,8 @@ public class ServerInstance {
         server.setConnectors(new Connector[]{connector});
 
         handler = new DatabaseHandler();
+
+        createStaticFolders();
 
         ServletContextHandler uctx = new ServletContextHandler(server, "/");
         activateServlets(uctx);
@@ -66,4 +70,12 @@ public class ServerInstance {
         ctx.addServlet(ugis, "/images");
     }
 
+    private void createStaticFolders() {
+        File f = new File("static");
+        if (!f.exists()) f.mkdir();
+        File f1 = new File("static/userimages");
+        if (!f1.exists()) f1.mkdir();
+        File f2 = new File("static/convimages");
+        if (!f2.exists()) f2.mkdir();
+    }
 }
