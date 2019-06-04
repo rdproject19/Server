@@ -39,8 +39,7 @@ public class SocketServer extends WebSocketServer {
     }
 
     public void onStart() {
-        System.out.println("Server started");
-
+        System.out.println("WebSocket - Server started");
     }
 
 }

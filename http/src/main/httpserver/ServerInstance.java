@@ -28,6 +28,7 @@ public class ServerInstance {
         activateServlets(uctx);
 
         server.start();
+        System.out.println("HTTP - Server started");
     }
 
     private void activateServlets(ServletContextHandler ctx) {

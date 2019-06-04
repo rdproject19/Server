@@ -36,7 +36,5 @@ public class Main {
             e.printStackTrace();
         }
         s.run();
-
-        System.out.print("a");
     }
 }
