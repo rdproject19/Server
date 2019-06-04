@@ -1,9 +1,12 @@
 package socketserver.server;
 
 import com.google.gson.Gson;
+import socketserver.data.Conversation;
 import socketserver.exceptions.UnknownMessageTypeException;
 import socketserver.protocol.Error;
 import socketserver.protocol.*;
+
+import java.util.List;
 
 /**
  * Simple message factory
@@ -13,8 +16,9 @@ public class MessageFactory {
     private static final Gson gson = new Gson();
     private String type;
     private int code;
-    private String messageid;
     private String msg = "";
+    private List<Conversation> newconv;
+    private List<Message> newmessg;
 
     /**
      * Set message type
@@ -40,22 +44,32 @@ public class MessageFactory {
     }
 
     /**
-     * Sets message id
-     * @param id The message id
-     * @return The factory
-     */
-    public MessageFactory setMessageID(String id) {
-        this.messageid = id;
-        return this;
-    }
-
-    /**
      * Sets the message (for errors)
      * @param msg msg the error
      * @return The factory
      */
     public MessageFactory setMessageString(String msg) {
         this.msg = msg;
+        return this;
+    }
+
+    /**
+     * Sets the new conversation list (for updates)
+     * @param c The list
+     * @return The factory
+     */
+    public MessageFactory setNewConversations(List<Conversation> c) {
+        this.newconv = c;
+        return this;
+    }
+
+    /**
+     * Sets the new message list (for updates)
+     * @param m The list
+     * @return The factory
+     */
+    public MessageFactory setNewMessages(List<Message> m) {
+        this.newmessg = m;
         return this;
     }
 
@@ -85,10 +99,8 @@ public class MessageFactory {
         switch (type) {
             case MessageTypes.MESSAGE:
                 return new Message(type);
-            case MessageTypes.RECEIPT:
-                return new MessageReceipt(this.messageid, this.code);
-            case MessageTypes.AUTHCHALLENGERESPONSE:
-                return new AuthChallengeResponse(type);
+            case MessageTypes.UPDATE:
+                return new Update(type, newconv, newmessg);
             case MessageTypes.ERROR:
                 return new Error(type, code, msg);
             case MessageTypes.CONNECTION_SUCCESS:

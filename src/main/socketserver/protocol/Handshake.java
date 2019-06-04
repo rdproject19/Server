@@ -26,6 +26,9 @@ public class Handshake extends socketserver.protocol.BaseMessage {
                 dp.shiftDBToken(USER_ID, l);
                 conn.send(new MessageFactory().setType(MessageTypes.CONNECTION_SUCCESS).
                         setStatusCode(200).getBody());
+
+                //Send update
+                conn.send(dp.createUpdate(USER_ID));
             } else {
                 //NO
                 conn.send(

@@ -2,11 +2,15 @@ package socketserver.data;
 
 import org.java_websocket.WebSocket;
 import socketserver.exceptions.ConversationNotFoundException;
+import socketserver.exceptions.UnknownMessageTypeException;
 import socketserver.exceptions.UserNotFoundException;
 import socketserver.protocol.Message;
+import socketserver.server.MessageFactory;
 import socketserver.util.LSFR;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class DataProvider {
@@ -56,6 +60,34 @@ public class DataProvider {
 
     public void enqueueMessage(String recipient, Message message) {
         //No need to check if users exists, that was already verified
-        db.queueMessage(recipient, message);
+        UserQueueObject<Message> queueObject = new UserQueueObject<>("message", message);
+        db.queueMessage(recipient, queueObject);
+    }
+
+    public String createUpdate(String userid) {
+        List<UserQueueObject> toAdd = db.getQueue(userid);
+
+        List<Conversation> conversations = new ArrayList<>();
+        List<Message> messages = new ArrayList<>();
+
+        for (UserQueueObject q : toAdd) {
+            if (q.getType().equals("message")) {
+                messages.add((Message) q.getData());
+            } else if (q.getType().equals("conversation")) {
+                conversations.add((Conversation) q.getData());
+            }
+        }
+
+        String update = "";
+        try {
+            update = new MessageFactory().setType("update")
+                    .setNewConversations(conversations)
+                    .setNewMessages(messages)
+                    .getBody();
+        } catch (UnknownMessageTypeException e) {
+            e.printStackTrace();
+        }
+
+        return update;
     }
 }

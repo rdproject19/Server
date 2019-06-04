@@ -81,8 +81,12 @@ public class DatabaseAdapter {
         }
     }
 
-    public void queueMessage(String id, Message message) {
-        conversations.getCollection("usercollection").updateOne(eq("username", id), addToSet("queue", message));
+    public void queueMessage(String id, UserQueueObject data) {
+        conversations.getCollection("usercollection").updateOne(eq("username", id), addToSet("queue", data));
+    }
+
+    public List<UserQueueObject> getQueue(String id) {
+        return conversations.getCollection("usercollection").find(eq("username", id)).first().getList("queue", UserQueueObject.class);
     }
 
     private boolean initDatabases() {

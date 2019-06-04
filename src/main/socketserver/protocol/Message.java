@@ -11,11 +11,10 @@ import java.util.List;
 
 public class Message extends BaseMessage {
 
-    public String id;
-    public String uid;
-    public String convid;
-    public long timestamp;
-    String body;
+    public String SENDER_ID;
+    public String CONVERSATION_ID;
+    long TIMESTAMP;
+    String MESSAGE;
 
     public Message(String type) {
         super(type);
@@ -23,16 +22,16 @@ public class Message extends BaseMessage {
 
     @Override
     public void handle(DataProvider dp) throws UserNotFoundException, UnknownMessageTypeException {
-        UserConnection conn = dp.getUser(uid);
+        UserConnection conn = dp.getUser(SENDER_ID);
         if (conn == null) {
             return;
         }
 
         try {
-            List<String> recipients = dp.getConversation(convid).getMembers();
+            List<String> recipients = dp.getConversation(CONVERSATION_ID).getMembers();
 
             for (String r : recipients) {
-               UserConnection recipientConnection = dp.getUser(uid);
+               UserConnection recipientConnection = dp.getUser(SENDER_ID);
                if (recipientConnection == null) {
                    //Enqueue message
                     dp.enqueueMessage(r, this);

@@ -50,8 +50,6 @@ public class MessageHandler {
                 return Message.class;
             case MessageTypes.RECEIPT:
                 return MessageReceipt.class;
-            case MessageTypes.AUTHCHALLENGERESPONSE:
-                return AuthChallengeResponse.class;
             case MessageTypes.HANDSHAKE:
                 return Handshake.class;
             case MessageTypes.ERROR:

@@ -5,7 +5,7 @@ import socketserver.exceptions.BaseTypeHandleException;
 import socketserver.exceptions.MessageHandleException;
 
 public class BaseMessage {
-    public String type;
+    public String TYPE;
 
     /**
      * Handles the message
@@ -17,6 +17,6 @@ public class BaseMessage {
     }
 
     public BaseMessage(String type) {
-        this.type = type;
+        this.TYPE = type;
     }
 }
