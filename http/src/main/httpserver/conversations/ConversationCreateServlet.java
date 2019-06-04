@@ -46,12 +46,14 @@ public class ConversationCreateServlet extends HttpServlet {
         if (group) {
             if (members.length < 2) {
                 res.setStatus(HttpStatus.BAD_REQUEST_400);
+                return;
             } else {
                 conversation = h.createNewConversation(members, true);
             }
         } else {
             if (members.length != 2) {
                 res.setStatus(HttpStatus.BAD_REQUEST_400);
+                return;
             } else {
                 conversation = h.createNewConversation(members, false);
             }
