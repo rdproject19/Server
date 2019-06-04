@@ -26,7 +26,7 @@ public class MessageHandler {
      */
     public void receiveMessage(String raw, WebSocket user) {
         BaseMessage msg = gson.fromJson(raw, BaseMessage.class);
-        Class<? extends BaseMessage> msgtype = determineMessageType(msg.type);
+        Class<? extends BaseMessage> msgtype = determineMessageType(msg.TYPE);
         BaseMessage message = gson.fromJson(raw, msgtype);
         try {
             if (message instanceof Handshake) {

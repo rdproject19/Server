@@ -11,6 +11,6 @@ public class UnknownMessage extends BaseMessage {
 
     @Override
     public void handle(DataProvider dp) throws UnknownMessageTypeException {
-        throw new UnknownMessageTypeException(this.type);
+        throw new UnknownMessageTypeException(this.TYPE);
     }
 }
