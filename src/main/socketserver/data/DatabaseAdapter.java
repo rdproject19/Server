@@ -118,12 +118,15 @@ public class DatabaseAdapter {
         for (ObjectId oid : queued) {
             Document d = conversations.getCollection("queue").find(eq("_id", oid)).first();
             UserQueueObject queueObject = UserQueueObject.fromDocument(d);
+            result.add(queueObject);
             if (queueObject.receivedByAll()) {
                 conversations.getCollection("queue").deleteOne(eq("_id", oid));
             } else {
                 conversations.getCollection("queue").updateOne(eq("_id", oid), inc("received", 1));
             }
         }
+
+        users.getCollection("usercollection").updateOne(eq("username", id), set("queue", new ArrayList<>()));
 
         return result;
     }

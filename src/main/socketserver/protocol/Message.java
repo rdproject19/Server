@@ -19,7 +19,7 @@ public class Message extends BaseMessage implements Queueable {
     public String CONVERSATION_ID;
     int MESSAGE_ID;
     long TIMESTAMP;
-    String MESSAGE;
+    public String MESSAGE;
     public boolean DELAYED;
     public long SEND_AT = 0;
 

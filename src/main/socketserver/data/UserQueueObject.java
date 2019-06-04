@@ -31,15 +31,15 @@ public class UserQueueObject implements Queueable {
         String type = document.getString("type");
         Document data = (Document) document.get("data");
 
-        int receivedBy = document.getInteger("received");
+        int numrecipients = document.getInteger("recipients");
 
         UserQueueObject q;
         if (type.equals("message")) {
-            q = new UserQueueObject(type, receivedBy, Message.fromDocument(data));
+            q = new UserQueueObject(type, numrecipients, Message.fromDocument(data));
         } else {
-            q = new UserQueueObject(type, receivedBy, Conversation.fromDocument(data));
+            q = new UserQueueObject(type, numrecipients, Conversation.fromDocument(data));
         }
-        q.recipients = document.getInteger("recipients");
+        q.receivedBy = document.getInteger("received");
 
         return q;
     }
@@ -49,7 +49,7 @@ public class UserQueueObject implements Queueable {
     }
 
     public boolean receivedByAll() {
-        return recipients >= receivedBy + 1;
+        return recipients <= (receivedBy + 1);
     }
 
     public Queueable getData() {

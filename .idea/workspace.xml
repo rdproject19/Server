@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abe1aa20-8abd-47b0-b081-037592d27678" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/socketserver/data/Queueable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/http.iml" beforeDir="false" afterPath="$PROJECT_DIR$/http/http.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/data/Conversation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/data/Conversation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/socketserver/data/UserQueueObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/data/UserQueueObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/socketserver/protocol/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/server/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/server/SocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/util/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/util/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/socketserver/util/LSFRTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/socketserver/util/LSFRTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/socketserver/data/DataProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/socketserver/data/DataProviderTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,32 +28,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/SocketServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+            <state relative-caret-position="170">
+              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/Conversation.java">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/SocketServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-              <folding>
-                <element signature="e#206#207#0" expanded="true" />
-                <element signature="e#234#235#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
-                <element signature="e#870#871#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-493">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -78,37 +66,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java">
+        <entry file="file://$PROJECT_DIR$/test/socketserver/data/DataProviderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/UserQueueObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="224">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1266#1267#0" expanded="true" />
-                <element signature="e#1293#1294#0" expanded="true" />
-                <element signature="e#1331#1332#0" expanded="true" />
-                <element signature="e#1382#1383#0" expanded="true" />
-                <element signature="e#1416#1417#0" expanded="true" />
-                <element signature="e#1443#1444#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/socketserver/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+            <state relative-caret-position="119">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/UserQueueObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1422#1423#0" expanded="true" />
+                <element signature="e#1473#1474#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,8 +103,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="104" column="66" selection-start-line="104" selection-start-column="66" selection-end-line="104" selection-end-column="66" />
+            <state relative-caret-position="374">
+              <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-sync/3.10.1/mongodb-driver-sync-3.10.1.jar!/com/mongodb/client/internal/MongoDatabaseImpl.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
             </state>
           </provider>
         </entry>
@@ -126,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/test/socketserver/util/LSFRTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -148,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/data/CacheManager.java" />
         <option value="$PROJECT_DIR$/src/main/data/UserConnection.java" />
         <option value="$PROJECT_DIR$/src/main/protocol/Message.java" />
         <option value="$PROJECT_DIR$/src/main/server/SocketServer.java" />
@@ -192,13 +187,14 @@
         <option value="$PROJECT_DIR$/test/socketserver/data/Queueable.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/data/Conversation.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/data/Queueable.java" />
-        <option value="$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/util/Configuration.java" />
-        <option value="$PROJECT_DIR$/src/main/socketserver/protocol/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/socketserver/data/UserQueueObject.java" />
         <option value="$PROJECT_DIR$/test/socketserver/util/LSFRTest.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/server/SocketServer.java" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/protocol/Message.java" />
+        <option value="$PROJECT_DIR$/test/socketserver/data/DataProviderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/data/UserQueueObject.java" />
       </list>
     </option>
   </component>
@@ -213,6 +209,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -288,11 +286,6 @@
             <path>
               <item name="socket" type="b2602c69:ProjectViewProjectNode" />
               <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -319,8 +312,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -342,12 +333,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="socketserver.data" />
-      <recent name="exceptions" />
-      <recent name="db" />
-      <recent name="protocol" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="server" />
       <recent name="httpserver.user" />
@@ -364,6 +349,12 @@
       <recent name="" />
       <recent name="util" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ji\Documents\rdproject\server\src\main\resources" />
+      <recent name="C:\Users\Ji\Documents\rdproject\server\src\main\socketserver\resources" />
+      <recent name="C:\Users\Ji\Documents\rdproject\server\src\resources" />
+      <recent name="C:\Users\Ji\Documents\rdproject\server\src\main\util" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\koens\Documents\RDPROJECT\Server\target" />
       <recent name="C:\Users\koens\Documents\RDPROJECT\Server\target\classes\socketserver" />
@@ -372,11 +363,11 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="httpserver" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Ji\Documents\rdproject\server\src\main\resources" />
-      <recent name="C:\Users\Ji\Documents\rdproject\server\src\main\socketserver\resources" />
-      <recent name="C:\Users\Ji\Documents\rdproject\server\src\resources" />
-      <recent name="C:\Users\Ji\Documents\rdproject\server\src\main\util" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="socketserver.data" />
+      <recent name="exceptions" />
+      <recent name="db" />
+      <recent name="protocol" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -391,20 +382,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="httpserver.Main" />
-      <module name="http" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="httpserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.DataProviderTest.testUpdate">
     <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="socketserver.Main" />
       <module name="socket" />
@@ -467,7 +445,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatabaseAdapterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DataProviderTest.testQueuing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="socket" />
       <extension name="coverage">
         <pattern>
@@ -476,8 +454,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="socketserver.data" />
-      <option name="MAIN_CLASS_NAME" value="socketserver.data.DatabaseAdapterTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="socketserver.data.DataProviderTest" />
+      <option name="METHOD_NAME" value="testQueuing" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataProviderTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="socket" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="socketserver.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="socketserver.data" />
+      <option name="MAIN_CLASS_NAME" value="socketserver.data.DataProviderTest" />
+      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -650,25 +645,25 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Main (2)" />
       <item itemvalue="Azure Web App.Azure Web App: socket:socket" />
       <item itemvalue="JUnit.DataProviderTest" />
-      <item itemvalue="JUnit.DatabaseAdapterTest" />
       <item itemvalue="JUnit.LSFRTest.testShift" />
       <item itemvalue="JUnit.MessageFactoryTest" />
       <item itemvalue="Maven.http [package]" />
       <item itemvalue="Maven.http [install]" />
       <item itemvalue="Maven.socket [install]" />
       <item itemvalue="Maven.socket [clean,compile,package]" />
+      <item itemvalue="JUnit.DataProviderTest.testQueuing" />
+      <item itemvalue="JUnit.DataProviderTest.testUpdate" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DataProviderTest.testUpdate" />
+        <item itemvalue="JUnit.DataProviderTest.testQueuing" />
         <item itemvalue="JUnit.LSFRTest.testShift" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="JUnit.MessageFactoryTest" />
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="JUnit.DatabaseAdapterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -708,7 +703,8 @@
       <workItem from="1559647364507" duration="4534000" />
       <workItem from="1559654047325" duration="408000" />
       <workItem from="1559662146605" duration="4166000" />
-      <workItem from="1559669054790" duration="1694000" />
+      <workItem from="1559669054790" duration="1908000" />
+      <workItem from="1559680810774" duration="1855000" />
     </task>
     <task id="LOCAL-00001" summary="Added more stuff for data management">
       <created>1558432897929</created>
@@ -1004,43 +1000,50 @@
       <option name="project" value="LOCAL" />
       <updated>1559651989010</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="-Better queueing&#10;-Connections are removed after disconnect">
+      <created>1559670949289</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1559670949289</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DataProviderTest - 2019.06.04 at 19h 24m 35s.xml">
+    <history-entry file="DataProviderTest - 2019.06.04 at 23h 02m 10s.xml">
       <configuration name="DataProviderTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LSFRTest_testShift - 2019.06.04 at 19h 25m 31s.xml">
-      <configuration name="LSFRTest.testShift" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataProviderTest - 2019.06.04 at 19h 26m 04s.xml">
+    <history-entry file="DataProviderTest - 2019.06.04 at 23h 03m 20s.xml">
       <configuration name="DataProviderTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LSFRTest_testShift - 2019.06.04 at 19h 26m 25s.xml">
-      <configuration name="LSFRTest.testShift" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LSFRTest_testShift - 2019.06.04 at 19h 28m 13s.xml">
-      <configuration name="LSFRTest.testShift" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataProviderTest - 2019.06.04 at 19h 28m 27s.xml">
+    <history-entry file="DataProviderTest - 2019.06.04 at 23h 04m 06s.xml">
       <configuration name="DataProviderTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataProviderTest - 2019.06.04 at 19h 30m 10s.xml">
+    <history-entry file="DataProviderTest - 2019.06.04 at 23h 04m 39s.xml">
       <configuration name="DataProviderTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataProviderTest - 2019.06.04 at 19h 33m 11s.xml">
-      <configuration name="DataProviderTest" configurationId="JUnit" />
+    <history-entry file="DataProviderTest_testUpdate - 2019.06.04 at 23h 06m 23s.xml">
+      <configuration name="DataProviderTest.testUpdate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LSFRTest_testShift - 2019.06.04 at 19h 36m 28s.xml">
-      <configuration name="LSFRTest.testShift" configurationId="JUnit" />
+    <history-entry file="DataProviderTest_testQueuing - 2019.06.04 at 23h 07m 11s.xml">
+      <configuration name="DataProviderTest.testQueuing" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataProviderTest - 2019.06.04 at 19h 48m 16s.xml">
-      <configuration name="DataProviderTest" configurationId="JUnit" />
+    <history-entry file="DataProviderTest_testUpdate - 2019.06.04 at 23h 07m 36s.xml">
+      <configuration name="DataProviderTest.testUpdate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataProviderTest_testUpdate - 2019.06.04 at 23h 07m 54s.xml">
+      <configuration name="DataProviderTest.testUpdate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataProviderTest_testQueuing - 2019.06.04 at 23h 08m 46s.xml">
+      <configuration name="DataProviderTest.testQueuing" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataProviderTest_testUpdate - 2019.06.04 at 23h 08m 50s.xml">
+      <configuration name="DataProviderTest.testUpdate" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93679000" />
+    <option name="totallyTimeSpent" value="95748000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1055,7 +1058,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.2489339" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.25159913" />
       <window_info id="Structure" order="1" sideWeight="0.50165015" side_tool="true" weight="0.29850745" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1066,7 +1069,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49597314" weight="0.32333332" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" weight="0.39555556" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" visible="true" weight="0.39555556" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -1173,7 +1176,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Token needs to be updated on password change" />
     <MESSAGE value="Queue for conversations" />
     <MESSAGE value="maven again" />
     <MESSAGE value="Image only for groups" />
@@ -1198,7 +1200,8 @@
     <MESSAGE value="Added desync support" />
     <MESSAGE value="Message id is int" />
     <MESSAGE value="Shouldn't send to sender" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shouldn't send to sender" />
+    <MESSAGE value="-Better queueing&#10;-Connections are removed after disconnect" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Better queueing&#10;-Connections are removed after disconnect" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1259,12 +1262,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java</url>
-          <line>106</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java</url>
           <line>59</line>
           <properties />
           <option name="timeStamp" value="18" />
@@ -1275,6 +1272,54 @@
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/socketserver/data/DataProviderTest.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/socketserver/data/DataProviderTest.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java</url>
+          <line>123</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java</url>
+          <line>122</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java</url>
+          <line>124</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java</url>
+          <line>121</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/socketserver/data/UserQueueObject.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -1283,11 +1328,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/UserNotFoundException.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/exceptions/MessageHandleException.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/exceptions/UserNotFoundException.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/exceptions/ConversationNotFoundException.java" />
-    <entry file="file://$PROJECT_DIR$/test/socketserver/data/Conversation.java" />
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/ConnectedMessage.java" />
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Update.java" />
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/BaseMessage.java" />
@@ -1385,7 +1425,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/MessageReceipt.java" />
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Error.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java" />
     <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/conversations/ConversationMembersServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1441,27 +1480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/socketserver/util/LSFRTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="104" column="66" selection-start-line="104" selection-start-column="66" selection-end-line="104" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/java-websocket/Java-WebSocket/1.4.0/Java-WebSocket-1.4.0-sources.jar!/org/java_websocket/WebSocket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1493,8 +1511,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/Conversation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="374">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="e#206#207#0" expanded="true" />
             <element signature="e#234#235#0" expanded="true" />
@@ -1504,10 +1522,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/socketserver/util/LSFRTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/exceptions/BaseTypeHandleException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.10.1/mongodb-driver-core-3.10.1.jar!/com/mongodb/assertions/Assertions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.10.1/mongodb-driver-core-3.10.1.jar!/com/mongodb/MongoNamespace.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-sync/3.10.1/mongodb-driver-sync-3.10.1.jar!/com/mongodb/client/internal/MongoDatabaseImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="170">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-493">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/SocketServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1524,31 +1598,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="119">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/socketserver/data/DataProviderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/UserQueueObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="340">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1266#1267#0" expanded="true" />
-            <element signature="e#1293#1294#0" expanded="true" />
-            <element signature="e#1331#1332#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
-            <element signature="e#1416#1417#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1473#1474#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/SocketServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
         </state>
       </provider>
     </entry>
