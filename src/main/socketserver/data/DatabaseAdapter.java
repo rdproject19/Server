@@ -1,5 +1,6 @@
 package socketserver.data;
 
+import com.google.common.hash.Hashing;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
@@ -10,6 +11,7 @@ import socketserver.exceptions.ConversationNotFoundException;
 import socketserver.exceptions.UserNotFoundException;
 import socketserver.util.LSFR;
 
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 import static com.mongodb.client.model.Filters.eq;
@@ -63,6 +65,24 @@ public class DatabaseAdapter {
                             set("state", l.getStateString()),
                             set("shiftcount", l.getShiftCount())
                     ));
+        }
+    }
+
+    public void resetLSFR(String id, long newcount) {
+        FindIterable user = users.getCollection("usercollection").find(eq("username", id));
+        if (user.first() != null) {
+            Document d = (Document) user.first();
+            LSFR l = new LSFR(d.getString("token"), newcount);
+
+            String newseed = Hashing.sha512().hashString(l.getStateString(), StandardCharsets.UTF_8).toString();
+
+            users.getCollection("usercollection")
+                    .updateOne(eq("username", id),
+                            combine(
+                                    unset("state"),
+                                    set("shiftcount", 0),
+                                    set("token", newseed)
+                            ));
         }
     }
 

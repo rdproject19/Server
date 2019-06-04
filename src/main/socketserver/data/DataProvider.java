@@ -33,6 +33,7 @@ public class DataProvider {
     public void shiftDBToken(String id, LSFR l) {
         db.updateLSFR(id, l);
     }
+    public void resetDBToken(String id, long count) {db.resetLSFR(id, count);}
 
     public void addUser(String uid, WebSocket conn) {
         UserConnection uconn = new UserConnection(conn);

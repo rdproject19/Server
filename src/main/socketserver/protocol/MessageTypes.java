@@ -7,4 +7,5 @@ public class MessageTypes {
     public static final String HANDSHAKE = "handshake";
     public static final String CONNECTION_SUCCESS = "connected";
     public static final String ERROR = "error";
+    public static final String DESYNC = "desync";
 }

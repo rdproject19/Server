@@ -56,6 +56,8 @@ public class MessageHandler {
                 return Error.class;
             case MessageTypes.CONNECTION_SUCCESS:
                 return socketserver.protocol.ConnectedMessage.class;
+            case MessageTypes.DESYNC:
+                return DesyncMessage.class;
             default:
                 return UnknownMessage.class;
         }
