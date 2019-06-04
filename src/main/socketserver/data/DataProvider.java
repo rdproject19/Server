@@ -66,6 +66,9 @@ public class DataProvider {
 
     public String createUpdate(String userid) {
         List<UserQueueObject> toAdd = db.getQueue(userid);
+        if (toAdd == null) {
+            toAdd = new ArrayList<>();
+        }
 
         List<Conversation> conversations = new ArrayList<>();
         List<Message> messages = new ArrayList<>();
