@@ -114,6 +114,9 @@ public class DatabaseAdapter {
 
     public List<UserQueueObject> getQueue(String id) throws QueueObjectNotFoundException {
         List<ObjectId> queued = users.getCollection("usercollection").find(eq("username", id)).first().getList("queue", ObjectId.class);
+        if (queued == null) {
+            return new ArrayList<>();
+        }
         List<UserQueueObject> result = new ArrayList<>();
 
         for (ObjectId oid : queued) {
