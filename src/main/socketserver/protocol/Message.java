@@ -50,7 +50,7 @@ public class Message extends BaseMessage implements Queueable {
             List<String> enqueueFor = new ArrayList<>();
 
             for (String r : recipients) {
-               if (r.equals(SENDER_ID)) continue;
+               //if (r.equals(SENDER_ID)) continue;
 
                UserConnection recipientConnection = dp.getUser(r);
                if (recipientConnection == null) {
