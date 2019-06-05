@@ -58,6 +58,8 @@ public class MessageHandler {
                 return socketserver.protocol.ConnectedMessage.class;
             case MessageTypes.DESYNC:
                 return DesyncMessage.class;
+            case MessageTypes.UPDATE:
+                return Update.class;
             default:
                 return UnknownMessage.class;
         }

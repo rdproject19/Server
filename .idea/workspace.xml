@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="abe1aa20-8abd-47b0-b081-037592d27678" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/protocol/Handshake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/Handshake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/protocol/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/protocol/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,11 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Handshake.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Update.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="22" column="83" selection-start-line="22" selection-start-column="83" selection-end-line="22" selection-end-column="83" />
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -48,19 +58,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/Conversation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="19" selection-end-column="19" />
-              <folding>
-                <element signature="e#178#179#0" expanded="true" />
-                <element signature="e#206#207#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -106,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="83">
+              <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -124,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+            <state relative-caret-position="165">
+              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/main/socketserver/data/UserConnection.java" />
         <option value="$PROJECT_DIR$/src/resources/config.xml" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/AuthChallengeResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/socketserver/protocol/Update.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/BaseMessage.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/UnknownMessage.java" />
         <option value="$PROJECT_DIR$/http/src/main/httpserver/conversations/ConversationMembersEditServlet.java" />
@@ -181,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/main/socketserver/Main.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/Error.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/MessageTypes.java" />
-        <option value="$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/DesyncMessage.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/MessageReceipt.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/server/MessageFactory.java" />
@@ -191,7 +186,6 @@
         <option value="$PROJECT_DIR$/src/main/socketserver/util/Configuration.java" />
         <option value="$PROJECT_DIR$/test/socketserver/util/LSFRTest.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/server/SocketServer.java" />
-        <option value="$PROJECT_DIR$/src/main/socketserver/protocol/Message.java" />
         <option value="$PROJECT_DIR$/test/socketserver/data/DataProviderTest.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/data/UserQueueObject.java" />
         <option value="$PROJECT_DIR$/http/src/main/httpserver/Conversation.java" />
@@ -201,6 +195,9 @@
         <option value="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/Handshake.java" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/protocol/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/protocol/Update.java" />
       </list>
     </option>
   </component>
@@ -221,6 +218,32 @@
             <path>
               <item name="socket" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="http" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="http" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="http" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="httpserver" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="socket" type="b2602c69:ProjectViewProjectNode" />
@@ -694,7 +717,7 @@
       <workItem from="1559662146605" duration="4166000" />
       <workItem from="1559669054790" duration="1908000" />
       <workItem from="1559680810774" duration="1855000" />
-      <workItem from="1559718746567" duration="1243000" />
+      <workItem from="1559718746567" duration="3706000" />
     </task>
     <task id="LOCAL-00001" summary="Added more stuff for data management">
       <created>1558432897929</created>
@@ -1018,7 +1041,21 @@
       <option name="project" value="LOCAL" />
       <updated>1559719972262</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Wildcard token for testing">
+      <created>1559720001256</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1559720001256</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Temp">
+      <created>1559720119815</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1559720119815</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1054,7 +1091,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98028000" />
+    <option name="totallyTimeSpent" value="100491000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1187,7 +1224,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Configuration" />
     <MESSAGE value="Redid pretty much the entire socket server" />
     <MESSAGE value="It should compile every time now" />
     <MESSAGE value="pomdiedom" />
@@ -1212,7 +1248,8 @@
     <MESSAGE value="Queuing is done..." />
     <MESSAGE value="If no queue -&gt; no null" />
     <MESSAGE value="Wildcard token for testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wildcard token for testing" />
+    <MESSAGE value="Temp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Temp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1520,13 +1557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Update.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/Conversation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1570,16 +1600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/DesyncMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1604,17 +1624,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Message.java">
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Handshake.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="272">
+          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Handshake.java">
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/protocol/Update.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="22" column="83" selection-start-line="22" selection-start-column="83" selection-end-line="22" selection-end-column="83" />
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
         </state>
       </provider>
     </entry>
