@@ -3,6 +3,7 @@ package socketserver.data;
 import org.java_websocket.WebSocket;
 import org.java_websocket.WebSocketImpl;
 import socketserver.exceptions.ConversationNotFoundException;
+import socketserver.exceptions.QueueObjectNotFoundException;
 import socketserver.exceptions.UnknownMessageTypeException;
 import socketserver.exceptions.UserNotFoundException;
 import socketserver.protocol.Message;
@@ -78,8 +79,18 @@ public class DataProvider {
         db.queueMessage(recipient, queueObject);
     }
 
-    public String createUpdate(String userid) {
-        List<UserQueueObject> toAdd = db.getQueue(userid);
+    public String createUpdate(String userid) throws UnknownMessageTypeException {
+        List<UserQueueObject> toAdd = null;
+        try {
+            toAdd = db.getQueue(userid);
+        } catch (QueueObjectNotFoundException e) {
+            e.printStackTrace();
+            return new MessageFactory()
+                    .setType("error")
+                    .setStatusCode(404)
+                    .setMessageString(e.toString())
+                    .getBody();
+        }
         if (toAdd == null) {
             toAdd = new ArrayList<>();
         }
@@ -105,14 +116,10 @@ public class DataProvider {
         }
 
         String update = "";
-        try {
-            update = new MessageFactory().setType("update")
+        update = new MessageFactory().setType("update")
                     .setNewConversations(conversations)
                     .setNewMessages(messages)
                     .getBody();
-        } catch (UnknownMessageTypeException e) {
-            e.printStackTrace();
-        }
 
         return update;
     }

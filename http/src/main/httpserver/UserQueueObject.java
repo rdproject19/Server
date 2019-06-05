@@ -1,20 +1,28 @@
 package httpserver;
 
-public class UserQueueObject<DataType> {
+import org.bson.Document;
+
+public class UserQueueObject {
 
     private String type;
-    private DataType data;
+    private Conversation data;
 
-    public UserQueueObject(String type, DataType data) {
+    private int recipients;
+    private int receivedBy;
+
+    public UserQueueObject(String type, int numofrecipients, Conversation data) {
         this.type = type;
         this.data = data;
+        this.recipients = numofrecipients;
     }
 
-    public String getType() {
-        return type;
-    }
+    public Document toDocument() {
+        Document newDocument = new Document();
+        newDocument.append("type", type)
+                .append("recipients", recipients)
+                .append("received", receivedBy)
+                .append("data", data.toDocument());
 
-    public DataType getData() {
-        return data;
+        return newDocument;
     }
 }

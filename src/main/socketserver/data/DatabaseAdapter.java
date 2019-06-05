@@ -8,6 +8,7 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 import socketserver.exceptions.ConversationNotFoundException;
+import socketserver.exceptions.QueueObjectNotFoundException;
 import socketserver.exceptions.UserNotFoundException;
 import socketserver.util.LSFR;
 
@@ -111,12 +112,15 @@ public class DatabaseAdapter {
         users.getCollection("usercollection").updateMany(in("username", ids), addToSet("queue", oid));
     }
 
-    public List<UserQueueObject> getQueue(String id) {
+    public List<UserQueueObject> getQueue(String id) throws QueueObjectNotFoundException {
         List<ObjectId> queued = users.getCollection("usercollection").find(eq("username", id)).first().getList("queue", ObjectId.class);
         List<UserQueueObject> result = new ArrayList<>();
 
         for (ObjectId oid : queued) {
             Document d = conversations.getCollection("queue").find(eq("_id", oid)).first();
+            if (d == null) {
+                throw new QueueObjectNotFoundException(oid.toString());
+            }
             UserQueueObject queueObject = UserQueueObject.fromDocument(d);
             result.add(queueObject);
             if (queueObject.receivedByAll()) {
@@ -129,6 +133,11 @@ public class DatabaseAdapter {
         users.getCollection("usercollection").updateOne(eq("username", id), set("queue", new ArrayList<>()));
 
         return result;
+    }
+
+    public boolean documentExists(MongoDatabase db, String collection, String idfield, String id) {
+        Document d = db.getCollection(collection).find(eq(idfield, id)).first();
+        return d != null;
     }
 
     private boolean initDatabases() {
