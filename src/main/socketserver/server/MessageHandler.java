@@ -1,6 +1,7 @@
 package socketserver.server;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.stream.MalformedJsonException;
 import org.java_websocket.WebSocket;
 import socketserver.data.DataProvider;
@@ -32,11 +33,11 @@ public class MessageHandler {
         BaseMessage message;
         try {
             message = gson.fromJson(raw, msgtype);
-        } catch (Exception ex) {
+        } catch (JsonSyntaxException | IllegalStateException e) {
             try {
-                user.send(new MessageFactory().setType("error").setStatusCode(400).setMessageString("JSON was malformed: " + ex.getMessage()).getBody());
-            } catch (UnknownMessageTypeException e) {
-                e.printStackTrace();
+                user.send(new MessageFactory().setType("error").setStatusCode(400).setMessageString("JSON was malformed: " + e.getMessage()).getBody());
+            } catch (UnknownMessageTypeException ex) {
+                ex.printStackTrace();
             }
             return;
         }
