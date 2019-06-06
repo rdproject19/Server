@@ -1,9 +1,11 @@
 package socketserver.server;
 
 import com.google.gson.Gson;
+import com.google.gson.stream.MalformedJsonException;
 import org.java_websocket.WebSocket;
 import socketserver.data.DataProvider;
 import socketserver.exceptions.MessageHandleException;
+import socketserver.exceptions.UnknownMessageTypeException;
 import socketserver.protocol.Error;
 import socketserver.protocol.*;
 
@@ -27,7 +29,17 @@ public class MessageHandler {
     public void receiveMessage(String raw, WebSocket user) {
         BaseMessage msg = gson.fromJson(raw, BaseMessage.class);
         Class<? extends BaseMessage> msgtype = determineMessageType(msg.TYPE);
-        BaseMessage message = gson.fromJson(raw, msgtype);
+        BaseMessage message;
+        try {
+            message = gson.fromJson(raw, msgtype);
+        } catch (Exception ex) {
+            try {
+                user.send(new MessageFactory().setType("error").setStatusCode(400).setMessageString("JSON was malformed: " + ex.getMessage()).getBody());
+            } catch (UnknownMessageTypeException e) {
+                e.printStackTrace();
+            }
+            return;
+        }
         try {
             if (message instanceof Handshake) {
                 ((Handshake)message).handle(dataProvider, user);
