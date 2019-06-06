@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="abe1aa20-8abd-47b0-b081-037592d27678" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/socketserver/data/DataProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/socketserver/data/DataProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,11 +25,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/conversations/ConversationCreateServlet.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+            <state relative-caret-position="255">
+              <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="37" column="126" selection-start-line="37" selection-start-column="126" selection-end-line="37" selection-end-column="126" />
+            <state relative-caret-position="194">
+              <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -184,7 +186,6 @@
         <option value="$PROJECT_DIR$/http/src/main/httpserver/DatabaseHandler.java" />
         <option value="$PROJECT_DIR$/http/src/main/httpserver/UserQueueObject.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/exceptions/QueueObjectNotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/data/DatabaseAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/Handshake.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/Update.java" />
@@ -194,6 +195,7 @@
         <option value="$PROJECT_DIR$/src/main/socketserver/protocol/Message.java" />
         <option value="$PROJECT_DIR$/test/socketserver/data/DataProviderTest.java" />
         <option value="$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java" />
       </list>
     </option>
   </component>
@@ -754,14 +756,7 @@
       <workItem from="1559680810774" duration="1855000" />
       <workItem from="1559718746567" duration="9584000" />
       <workItem from="1559733024356" duration="6772000" />
-      <workItem from="1559808399522" duration="2670000" />
-    </task>
-    <task id="LOCAL-00004" summary="-Added some test case to enqueue messages: it works&#10;-Made sure the LSFR only accepts 128 byte seeds">
-      <created>1558532045579</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1558532045579</updated>
+      <workItem from="1559808399522" duration="3792000" />
     </task>
     <task id="LOCAL-00005" summary="-Addeed handshakes">
       <created>1558601953596</created>
@@ -1099,7 +1094,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559810367786</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Whatever">
+      <created>1559811217313</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1559811217313</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1135,7 +1137,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115811000" />
+    <option name="totallyTimeSpent" value="116933000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1150,17 +1152,17 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4947589" visible="true" weight="0.25704697" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49478078" visible="true" weight="0.25704697" />
       <window_info id="Structure" order="1" sideWeight="0.50165015" side_tool="true" weight="0.29850745" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.5052411" side_tool="true" visible="true" weight="0.25704697" />
+      <window_info id="Favorites" order="6" sideWeight="0.5052192" side_tool="true" visible="true" weight="0.25704697" />
       <window_info id="Azure Explorer" order="7" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49597314" weight="0.32294616" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49597314" visible="true" weight="0.32152975" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" weight="0.39555556" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1170,7 +1172,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49731544" weight="0.32777777" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50402683" side_tool="true" weight="0.32577905" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" sideWeight="0.49731544" visible="true" weight="0.3243626" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49731544" weight="0.3243626" />
       <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" order="13" />
       <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="14" />
       <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" order="15" />
@@ -1268,7 +1270,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new jar" />
     <MESSAGE value="How many times are we gonna f*ck around with maven?" />
     <MESSAGE value="Updates of message" />
     <MESSAGE value="Type in uppercase" />
@@ -1293,7 +1294,8 @@
     <MESSAGE value="Conv" />
     <MESSAGE value="Conversation updates for everyone!" />
     <MESSAGE value="More graceful json handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="More graceful json handling" />
+    <MESSAGE value="Whatever" />
+    <option name="LAST_COMMIT_MESSAGE" value="Whatever" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1565,18 +1567,6 @@
     <entry file="file://$PROJECT_DIR$/static/userimages/hff.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#removeUser#0;class#DataProvider#0" />
-            <element signature="e#1796#1845#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/http/src/main/httpserver/conversations/ConversationEditServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1698,8 +1688,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/socketserver/server/MessageHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="37" column="126" selection-start-line="37" selection-start-column="126" selection-end-line="37" selection-end-column="126" />
+        <state relative-caret-position="194">
+          <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/socketserver/data/DataProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

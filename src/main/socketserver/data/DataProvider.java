@@ -11,10 +11,7 @@ import socketserver.server.MessageFactory;
 import socketserver.util.LSFR;
 
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class DataProvider {
 
@@ -55,12 +52,15 @@ public class DataProvider {
     }
 
     public void removeUser(WebSocket socket) {
+        String found = "";
         for (String id : users.keySet()) {
             UserConnection c = users.get(id);
             if (c.getConnection().hashCode() == socket.hashCode()) {
-                users.remove(id);
+                found = id;
             }
         }
+        if (!found.equals(""))
+            users.remove(found);
     }
 
     public Conversation getConversation(String convID) throws ConversationNotFoundException {
