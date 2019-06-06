@@ -49,8 +49,11 @@ public class ConversationMembersEditServlet extends HttpServlet {
         int c = h.updateConversationMembers(gid, newmembers, DatabaseHandler.EditAction.ADD);
 
         if (c == 200) {
+            List<String> oldmembers = h.getConversationMembers(gid);
+            oldmembers.addAll(newmembers);
+
             Conversation conversation = Conversation.fromDocument(h.getConversation(gid));
-            h.enqueueUserConversationUpdates((String[]) newmembers.toArray(), conversation);
+            h.enqueueUserConversationUpdates((String[]) oldmembers.toArray(), conversation);
         }
 
         res.setStatus(c);
@@ -65,6 +68,7 @@ public class ConversationMembersEditServlet extends HttpServlet {
                 .collect(Collectors.toList());
 
         int c = h.updateConversationMembers(gid, pastmembers, DatabaseHandler.EditAction.DELETE);
+
         res.setStatus(c);
     }
 }
