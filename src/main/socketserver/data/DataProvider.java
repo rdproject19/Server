@@ -128,7 +128,6 @@ public class DataProvider {
             if (conversations.size() < MAX_CONVERSATION_SIZE) {
                 conversations.put(convID, c);
             }
-            collectCacheGarbage();
             return c;
         }
     }
@@ -200,19 +199,5 @@ public class DataProvider {
             e.printStackTrace();
         }
         return "";
-    }
-
-    /**
-     * Cleans up the conversation cache
-     */
-    private void collectCacheGarbage() {
-        final long ONE_DAY = 86400000;
-        final long CURRENT = System.currentTimeMillis();
-        final long ONE_DAY_AGO = CURRENT - ONE_DAY;
-        conversations.forEach((key, value) -> {
-            if (value.getCachedTime() <= ONE_DAY_AGO) {
-                conversations.remove(key);
-            }
-        });
     }
 }
