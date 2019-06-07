@@ -179,7 +179,7 @@ public class DatabaseHandler {
         if (d != null) {
             return d.getList("members", String.class);
         }
-        return null;
+        return new ArrayList<>();
     }
 
     public int updateConversationMembers(String gid, List<String> membersMutation, EditAction action) {
