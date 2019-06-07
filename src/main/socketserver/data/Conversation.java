@@ -55,7 +55,7 @@ public class Conversation implements Queueable {
      * @throws IllegalArgumentException if the conversation was invalid
      */
     public static Conversation fromDocument(Document first) {
-        Conversation c = new Conversation(first.getObjectId("_id").toString(), false);
+        Conversation c = new Conversation(first.getObjectId("id").toString(), false);
         List<String> members = first.getList("members", String.class);
         if (members.size() >= 2) {
             c.members = members;
