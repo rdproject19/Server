@@ -161,14 +161,9 @@ public class DatabaseAdapter {
      */
     public List<UserQueueObject> getQueue(String id) throws QueueObjectNotFoundException {
         //For some reason we cannot directly cast the strings to object ids
-        List<String> queue = users.getCollection("usercollection").find(eq("username", id)).first().getList("queue", String.class);
-        if (queue == null) {
+        List<ObjectId> queued = users.getCollection("usercollection").find(eq("username", id)).first().getList("queue", ObjectId.class);
+        if (queued == null) {
             return new ArrayList<>();
-        }
-
-        List<ObjectId> queued = new ArrayList<>();
-        for (String s : queue) {
-            queued.add(new ObjectId(s));
         }
 
         List<UserQueueObject> result = new ArrayList<>();
