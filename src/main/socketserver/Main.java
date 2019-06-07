@@ -21,7 +21,7 @@ public class Main {
             System.exit(-1);
         }
 
-        //To make unbind the address on shutdown
+        //To unbind the address on shutdown
         SocketServer finalS = s;
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             try {

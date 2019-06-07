@@ -180,7 +180,7 @@ public class DataProvider {
                 //If the message is the delayed
                 if (m.DELAYED) {
                     //If we're currently at or past the sending time, send the message
-                    if (Instant.now().getEpochSecond() >= m.SEND_AT) {
+                    if ((Instant.now().getEpochSecond() * 1000) >= m.SEND_AT) {
                         messages.add(m);
                     }
                 } else {

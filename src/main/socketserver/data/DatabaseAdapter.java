@@ -160,10 +160,17 @@ public class DatabaseAdapter {
      * @throws QueueObjectNotFoundException If an object enqueued for the user does not actually exist in the queue collection
      */
     public List<UserQueueObject> getQueue(String id) throws QueueObjectNotFoundException {
-        List<ObjectId> queued = users.getCollection("usercollection").find(eq("username", id)).first().getList("queue", ObjectId.class);
-        if (queued == null) {
+        //For some reason we cannot directly cast the strings to object ids
+        List<String> queue = users.getCollection("usercollection").find(eq("username", id)).first().getList("queue", String.class);
+        if (queue == null) {
             return new ArrayList<>();
         }
+
+        List<ObjectId> queued = new ArrayList<>();
+        for (String s : queue) {
+            queued.add(new ObjectId(s));
+        }
+
         List<UserQueueObject> result = new ArrayList<>();
 
         for (ObjectId oid : queued) {

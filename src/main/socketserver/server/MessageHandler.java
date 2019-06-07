@@ -24,7 +24,7 @@ public class MessageHandler {
 
     /**
      * Handles a message
-     * @param raw The raw message as it was received on the socketserver.server
+     * @param raw The raw message as it was received on the server
      */
     public void receiveMessage(String raw, WebSocket user) {
         BaseMessage msg = gson.fromJson(raw, BaseMessage.class);
