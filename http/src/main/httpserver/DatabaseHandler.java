@@ -8,7 +8,6 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.bson.types.ObjectId;
-import org.eclipse.jetty.server.Authentication;
 
 import java.nio.charset.Charset;
 import java.util.*;
@@ -220,10 +219,10 @@ public class DatabaseHandler {
         UserQueueObject queueObject = new UserQueueObject("conversation", targets.length, c);
         Document insertable = queueObject.toDocument();
         conversations.getCollection("queue").insertOne(insertable);
-
+        ObjectId id = insertable.getObjectId("_id");
         //Users already exist, no need to verify
         for (String t : targets) {
-            users.getCollection("usercollection").updateOne(eq("username", t), addToSet("queue", insertable.getObjectId("_id").toString()));
+            users.getCollection("usercollection").updateOne(eq("username", t), addToSet("queue", id));
         }
     }
 
