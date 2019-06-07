@@ -9,8 +9,8 @@ import java.util.List;
  */
 public class Conversation implements Queueable {
 
-    String id;
-    List<String> members;
+    String CONVERSATION_ID;
+    List<String> PARTICIPANTS;
 
     long cachedTime;
 
@@ -20,7 +20,7 @@ public class Conversation implements Queueable {
      * @param forCache Whether or not this conversation object is intended for caching
      */
     public Conversation(String id, boolean forCache) {
-        this.id = id;
+        this.CONVERSATION_ID = id;
         if (forCache)
             cacheObjectAccessed();
     }
@@ -30,7 +30,7 @@ public class Conversation implements Queueable {
      * @return A list of user ids
      */
     public List<String> getMembers() {
-        return members;
+        return PARTICIPANTS;
     }
 
     /**
@@ -58,7 +58,7 @@ public class Conversation implements Queueable {
         Conversation c = new Conversation(first.getString("id"), false);
         List<String> members = first.getList("members", String.class);
         if (members.size() >= 2) {
-            c.members = members;
+            c.PARTICIPANTS = members;
             return c;
         } else {
             throw new IllegalArgumentException("Conversation must contain at least two members");
@@ -71,6 +71,6 @@ public class Conversation implements Queueable {
      */
     @Override
     public Document toDocument() {
-        return new Document().append("id", id).append("members", members);
+        return new Document().append("id", CONVERSATION_ID).append("members", PARTICIPANTS);
     }
 }
