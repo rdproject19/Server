@@ -41,7 +41,7 @@ public class Message extends BaseMessage implements Queueable {
         try {
             List<String> recipients = dp.getConversation(CONVERSATION_ID).getMembers();
 
-            if (DELAYED && SEND_AT != 0 && SEND_AT != TIMESTAMP) {
+            if (DELAYED && SEND_AT != 0 && SEND_AT > TIMESTAMP) {
                 String[] schedule = new String[recipients.size()];
                 recipients.toArray(schedule);
                 dp.scheduleMessage(schedule, this);

@@ -152,11 +152,16 @@ public class DataProvider {
         db.queueMessage(recipient, queueObject);
     }
 
+    /**
+     * Schedules a message
+     * @param recipients The recipients of this message
+     * @param message The message to be scheduled
+     */
     public void scheduleMessage(final String[] recipients, Message message) {
-        final Instant sendIn = Instant.ofEpochMilli(message.SEND_AT).minus(Instant.now().toEpochMilli(), ChronoUnit.MILLIS);
+        final Instant sendIn = Instant.ofEpochSecond(message.SEND_AT).minus(Instant.now().toEpochMilli(), ChronoUnit.MILLIS);
         final String msg = MessageFactory.fromProtocolObject(message);
-        message.DELAYED = false;
 
+        //Schedule the message at the computed time
         execservice.schedule(() -> {
             List<String> toQueue = new ArrayList<>();
             for (String s : recipients) {
@@ -203,15 +208,7 @@ public class DataProvider {
         for (UserQueueObject q : toAdd) {
             if (q.getType().equals("message")) {
                 Message m = (Message) q.getData();
-                //If the message is the delayed
-                if (m.DELAYED) {
-                    //If we're currently at or past the sending time, send the message
-                    if ((Instant.now().getEpochSecond() * 1000) >= m.SEND_AT) {
-                        messages.add(m);
-                    }
-                } else {
-                    messages.add(m);
-                }
+                messages.add(m);
             } else if (q.getType().equals("conversation")) {
                 conversations.add((Conversation) q.getData());
             }
