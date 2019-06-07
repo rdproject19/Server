@@ -3,7 +3,6 @@ package socketserver.protocol;
 import socketserver.data.Conversation;
 import socketserver.data.DataProvider;
 import socketserver.data.UserConnection;
-import socketserver.exceptions.UnknownMessageTypeException;
 import socketserver.exceptions.UserNotFoundException;
 
 import java.util.List;

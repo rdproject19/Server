@@ -34,7 +34,7 @@ public class SocketServer extends WebSocketServer {
 
     public void onMessage(WebSocket webSocket, String s) {
         //Echo for test purposes
-        webSocket.send("Received: " + s);
+        //webSocket.send("Received: " + s);
         messageHandler.receiveMessage(s, webSocket);
     }
 

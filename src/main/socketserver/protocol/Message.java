@@ -1,6 +1,5 @@
 package socketserver.protocol;
 
-import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.google.gson.Gson;
 import org.bson.Document;
 import socketserver.data.DataProvider;
@@ -13,9 +12,6 @@ import socketserver.server.MessageFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ThreadFactory;
 
 public class Message extends BaseMessage implements Queueable {
 

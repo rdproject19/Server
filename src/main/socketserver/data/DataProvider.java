@@ -1,7 +1,6 @@
 package socketserver.data;
 
 import org.java_websocket.WebSocket;
-import org.java_websocket.WebSocketImpl;
 import socketserver.exceptions.ConversationNotFoundException;
 import socketserver.exceptions.QueueObjectNotFoundException;
 import socketserver.exceptions.UnknownMessageTypeException;
@@ -11,7 +10,7 @@ import socketserver.server.MessageFactory;
 import socketserver.util.LSFR;
 
 import java.time.Instant;
-import java.time.temporal.*;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -132,7 +131,11 @@ public class DataProvider {
             return c;
         } else {
             Conversation c = db.getConversation(convID);
-            if (conversations.size() < MAX_CONVERSATION_SIZE) {
+            if (conversations.size() == MAX_CONVERSATION_SIZE) {
+                if (collectCacheGarbage()) {
+                    conversations.put(convID, c);
+                }
+            } else {
                 conversations.put(convID, c);
             }
             return c;
@@ -160,9 +163,11 @@ public class DataProvider {
     public void scheduleMessage(final String[] recipients, Message message) {
         final Instant sendIn = Instant.ofEpochSecond(message.SEND_AT).minus(Instant.now().toEpochMilli(), ChronoUnit.MILLIS);
         final String msg = MessageFactory.fromProtocolObject(message);
+        System.out.println("Scheduled message at " + sendIn.toString());
 
         //Schedule the message at the computed time
         execservice.schedule(() -> {
+            System.out.println("Sending previously message with it " + message.MESSAGE);
             List<String> toQueue = new ArrayList<>();
             for (String s : recipients) {
                 try {
@@ -223,5 +228,25 @@ public class DataProvider {
             e.printStackTrace();
         }
         return "";
+    }
+
+    /**
+     * Removes conversations which have been unnecessarily cached for more than one day
+     * @return True if conversations were removed
+     */
+    private boolean collectCacheGarbage() {
+        final Set<String> toRemove = new HashSet<>();
+        final long ONE_DAY_AGO = System.currentTimeMillis() - 86400000;
+
+        conversations.forEach((k, v) -> {
+            if (v.getCachedTime() <= ONE_DAY_AGO)
+                toRemove.add(k);
+        });
+
+        for (String s : toRemove) {
+            conversations.remove(s);
+        }
+
+        return toRemove.isEmpty();
     }
 }

