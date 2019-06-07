@@ -1,5 +1,6 @@
 package socketserver.protocol;
 
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.google.gson.Gson;
 import org.bson.Document;
 import socketserver.data.DataProvider;
@@ -12,6 +13,9 @@ import socketserver.server.MessageFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ThreadFactory;
 
 public class Message extends BaseMessage implements Queueable {
 
@@ -34,39 +38,32 @@ public class Message extends BaseMessage implements Queueable {
             return;
         }
 
-        if (DELAYED) {
-            if (SEND_AT == 0) {
-                conn.sendMessage(new MessageFactory().setType("error").
-                        setStatusCode(400).
-                        setMessageString("Message was delayed, but no delivery time was specified").
-                        getBody());
-                return;
-            }
-        }
-
         try {
             List<String> recipients = dp.getConversation(CONVERSATION_ID).getMembers();
 
-            List<String> enqueueFor = new ArrayList<>();
+            if (DELAYED && SEND_AT != 0 && SEND_AT != TIMESTAMP) {
+                String[] schedule = new String[recipients.size()];
+                recipients.toArray(schedule);
+                dp.scheduleMessage(schedule, this);
+            } else {
+                List<String> enqueueFor = new ArrayList<>();
+                for (String r : recipients) {
+                    if (r.equals(SENDER_ID)) continue;
 
-            for (String r : recipients) {
-               if (r.equals(SENDER_ID)) continue;
+                    UserConnection recipientConnection = dp.getUser(r);
+                    if (recipientConnection == null) {
+                        //Enqueue message
+                        enqueueFor.add(r);
+                    } else {
+                        //Send right away
+                        recipientConnection.sendMessage(MessageFactory.fromProtocolObject(this));
+                    }
+                }
 
-               UserConnection recipientConnection = dp.getUser(r);
-               if (recipientConnection == null) {
-                   //Enqueue message
-                   enqueueFor.add(r);
-               } else {
-                   //Send right away
-                   if (!DELAYED) {
-                       recipientConnection.sendMessage(MessageFactory.fromProtocolObject(this));
-                   }
-               }
+                String[] arr = new String[enqueueFor.size()];
+                enqueueFor.toArray(arr);
+                dp.enqueueMessage(arr, this);
             }
-
-            String[] arr = new String[enqueueFor.size()];
-            enqueueFor.toArray(arr);
-            dp.enqueueMessage(arr, this);
 
             //Send confirmation
             conn.sendMessage(new MessageFactory().setType("receipt").setMessageID(MESSAGE_ID).getBody());

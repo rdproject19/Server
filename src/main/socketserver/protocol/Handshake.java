@@ -7,6 +7,8 @@ import socketserver.exceptions.UserNotFoundException;
 import socketserver.server.MessageFactory;
 import socketserver.util.LSFR;
 
+import java.util.concurrent.ScheduledExecutorService;
+
 public class Handshake extends socketserver.protocol.BaseMessage {
 
     public String USER_ID;
@@ -27,7 +29,7 @@ public class Handshake extends socketserver.protocol.BaseMessage {
                 conn.send(new MessageFactory().setType(MessageTypes.CONNECTION_SUCCESS).
                         setStatusCode(200).getBody());
 
-                //Send update
+                //Send updates
                 conn.send(dp.createUpdate(USER_ID));
             } else {
                 //NO

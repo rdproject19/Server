@@ -11,12 +11,19 @@ import socketserver.server.MessageFactory;
 import socketserver.util.LSFR;
 
 import java.time.Instant;
+import java.time.temporal.*;
 import java.util.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Handles all data management within the server
  */
 public class DataProvider {
+
+    //Scheduler
+    private static final ScheduledExecutorService execservice = Executors.newScheduledThreadPool(10);
 
     //DB
     DatabaseAdapter db;
@@ -143,6 +150,26 @@ public class DataProvider {
         //No need to check if users exists, that was already verified
         UserQueueObject queueObject = new UserQueueObject("message", recipient.length, message);
         db.queueMessage(recipient, queueObject);
+    }
+
+    public void scheduleMessage(final String[] recipients, Message message) {
+        final Instant sendIn = Instant.ofEpochMilli(message.SEND_AT).minus(Instant.now().toEpochMilli(), ChronoUnit.MILLIS);
+        final String msg = MessageFactory.fromProtocolObject(message);
+        message.DELAYED = false;
+
+        execservice.schedule(() -> {
+            List<String> toQueue = new ArrayList<>();
+            for (String s : recipients) {
+                try {
+                    UserConnection c = getUser(s);
+                    c.sendMessage(msg);
+                } catch (UserNotFoundException e) {
+                    toQueue.add(s);
+                }
+            }
+
+            enqueueMessage((String[]) toQueue.toArray(), message);
+        }, sendIn.getEpochSecond(), TimeUnit.SECONDS);
     }
 
     /**
