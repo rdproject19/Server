@@ -1,5 +1,8 @@
 package socketserver.exceptions;
 
+/**
+ * Thrown if a message of unknown type if received
+ */
 public class UnknownMessageTypeException extends MessageHandleException {
     String type;
     public UnknownMessageTypeException(String t) {

@@ -2,6 +2,9 @@ package socketserver.util;
 
 import java.nio.ByteBuffer;
 
+/**
+ * Basic LSFR
+ */
 public class LSFR {
 
     private String seed; // The authentication token (512 bytes)
@@ -83,6 +86,10 @@ public class LSFR {
         state = result;
     }
 
+    /**
+     * Gets the LSFR as a string
+     * @return A string representing the current state of the LSFR
+     */
     public String getStateString() {
         return new String(state);
     }

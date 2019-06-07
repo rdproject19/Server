@@ -1,5 +1,8 @@
 package socketserver.exceptions;
 
+/**
+ * Thrown if a queued object does not exist in the queue database
+ */
 public class QueueObjectNotFoundException extends Exception {
     String id;
     public QueueObjectNotFoundException(String objectID) {

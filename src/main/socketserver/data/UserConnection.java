@@ -2,29 +2,32 @@ package socketserver.data;
 
 import org.java_websocket.WebSocket;
 
+/**
+ * Basic object representing a user connected to the websocket server
+ */
 public class UserConnection {
     private WebSocket connection;
     private boolean authenticated;
 
-    private boolean active;
-
     public UserConnection(WebSocket socket) {
         this.connection = socket;
-        active = true;
     }
 
     public void setAuthenticated() {
         this.authenticated = true;
     }
 
-    public WebSocket getConnection() {
-        return connection;
+    public int getConnectionCode() {
+        return connection.hashCode();
     }
 
-    public boolean isAuthenticated() {
-        return authenticated;
+    /**
+     * Send a message to the user, if they have been authenticated
+     * @param message The message to send
+     */
+    public void sendMessage(String message) {
+        if (authenticated) {
+            connection.send(message);
+        }
     }
-
-    public boolean isActive() {return active;}
-    public void setActive(boolean val) {this.active = val;}
 }

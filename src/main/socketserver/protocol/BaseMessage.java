@@ -4,6 +4,9 @@ import socketserver.data.DataProvider;
 import socketserver.exceptions.BaseTypeHandleException;
 import socketserver.exceptions.MessageHandleException;
 
+/**
+ * Basic message representation
+ */
 public class BaseMessage {
     public String TYPE;
 

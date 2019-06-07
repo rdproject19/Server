@@ -36,7 +36,7 @@ public class Message extends BaseMessage implements Queueable {
 
         if (DELAYED) {
             if (SEND_AT == 0) {
-                conn.getConnection().send(new MessageFactory().setType("error").
+                conn.sendMessage(new MessageFactory().setType("error").
                         setStatusCode(400).
                         setMessageString("Message was delayed, but no delivery time was specified").
                         getBody());
@@ -59,7 +59,7 @@ public class Message extends BaseMessage implements Queueable {
                } else {
                    //Send right away
                    if (!DELAYED) {
-                       recipientConnection.getConnection().send(MessageFactory.fromProtocolObject(this));
+                       recipientConnection.sendMessage(MessageFactory.fromProtocolObject(this));
                    }
                }
             }
@@ -69,9 +69,9 @@ public class Message extends BaseMessage implements Queueable {
             dp.enqueueMessage(arr, this);
 
             //Send confirmation
-            conn.getConnection().send(new MessageFactory().setType("receipt").setMessageID(MESSAGE_ID).getBody());
+            conn.sendMessage(new MessageFactory().setType("receipt").setMessageID(MESSAGE_ID).getBody());
         } catch (ConversationNotFoundException e) {
-            conn.getConnection().send(new MessageFactory().setType("error").setStatusCode(404).setMessageString("Conversation not found").getBody());
+            conn.sendMessage(new MessageFactory().setType("error").setStatusCode(404).setMessageString("Conversation not found").getBody());
         }
     }
 

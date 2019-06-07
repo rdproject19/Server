@@ -1,5 +1,8 @@
 package socketserver.exceptions;
 
+/**
+ * Throw if a user is not found
+ */
 public class UserNotFoundException extends MessageHandleException {
     private String uid;
     public UserNotFoundException(String uid) {

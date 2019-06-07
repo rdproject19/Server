@@ -9,6 +9,9 @@ import socketserver.util.Configuration;
 
 import java.net.InetSocketAddress;
 
+/**
+ * Main socket server class
+ */
 public class SocketServer extends WebSocketServer {
 
     private socketserver.server.MessageHandler messageHandler;
@@ -17,7 +20,7 @@ public class SocketServer extends WebSocketServer {
     public SocketServer(InetSocketAddress addr, Configuration c) {
         super(addr);
         this.dataProvider = new DataProvider(new DatabaseAdapter(c.getDatabaseHost(), c.getDatabasePort()));
-        this.messageHandler = new socketserver.server.MessageHandler(this, dataProvider);
+        this.messageHandler = new socketserver.server.MessageHandler(dataProvider);
     }
 
     public void onOpen(WebSocket webSocket, ClientHandshake clientHandshake) {

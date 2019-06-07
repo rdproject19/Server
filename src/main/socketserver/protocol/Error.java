@@ -1,5 +1,8 @@
 package socketserver.protocol;
 
+/**
+ * Basic error message
+ */
 public class Error extends socketserver.protocol.BaseMessage {
 
     int CODE;

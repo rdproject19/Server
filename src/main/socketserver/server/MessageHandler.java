@@ -2,7 +2,6 @@ package socketserver.server;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
-import com.google.gson.stream.MalformedJsonException;
 import org.java_websocket.WebSocket;
 import socketserver.data.DataProvider;
 import socketserver.exceptions.MessageHandleException;
@@ -10,16 +9,16 @@ import socketserver.exceptions.UnknownMessageTypeException;
 import socketserver.protocol.Error;
 import socketserver.protocol.*;
 
+/**
+ * Handles incoming messages
+ */
 public class MessageHandler {
-
-    private socketserver.server.SocketServer serverInstance;
 
     private static final Gson gson = new Gson();
 
     private DataProvider dataProvider;
 
-    public MessageHandler(socketserver.server.SocketServer server, DataProvider d) {
-        this.serverInstance = server;
+    public MessageHandler(DataProvider d) {
         this.dataProvider = d;
     }
 

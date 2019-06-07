@@ -1,5 +1,8 @@
 package socketserver.exceptions;
 
+/**
+ * Thrown if a conversation does not exist
+ */
 public class ConversationNotFoundException extends Exception {
     private String id;
     public ConversationNotFoundException(String id) {

@@ -8,6 +8,9 @@ import socketserver.exceptions.UserNotFoundException;
 
 import java.util.List;
 
+/**
+ * Simple update message
+ */
 public class Update extends BaseMessage {
 
     public String USER_ID;
@@ -27,12 +30,8 @@ public class Update extends BaseMessage {
         try {
             UserConnection conn = dp.getUser(USER_ID);
 
-            try {
-                String update = dp.createUpdate(USER_ID);
-                conn.getConnection().send(update);
-            } catch (UnknownMessageTypeException e) {
-                e.printStackTrace() ;
-            }
+            String update = dp.createUpdate(USER_ID);
+            conn.sendMessage(update);
         } catch (UserNotFoundException e) {
             e.printStackTrace();
         }

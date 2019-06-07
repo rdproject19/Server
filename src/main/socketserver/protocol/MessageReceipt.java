@@ -2,6 +2,9 @@ package socketserver.protocol;
 
 import socketserver.data.DataProvider;
 
+/**
+ * Sent/received as confirmation of a message
+ */
 public class MessageReceipt extends BaseMessage {
 
     int MessageID;

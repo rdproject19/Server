@@ -38,6 +38,7 @@ public class Handshake extends socketserver.protocol.BaseMessage {
                         setMessageString("Tokens didn't match").
                         getBody()
                 );
+                conn.close();
             }
         } catch (UserNotFoundException e) {
             //User not found
@@ -49,6 +50,7 @@ public class Handshake extends socketserver.protocol.BaseMessage {
                                 setMessageString("User not found").
                                 getBody()
                 );
+                conn.close();
             } catch (UnknownMessageTypeException ex) {
                 e.printStackTrace();
             }

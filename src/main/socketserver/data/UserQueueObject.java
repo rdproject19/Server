@@ -3,6 +3,9 @@ package socketserver.data;
 import org.bson.Document;
 import socketserver.protocol.Message;
 
+/**
+ * Simple object representing a queued object
+ */
 public class UserQueueObject implements Queueable {
 
     private String type;
@@ -17,6 +20,10 @@ public class UserQueueObject implements Queueable {
         this.recipients = numofrecipients;
     }
 
+    /**
+     * Converts current instance to BSON object
+     * @return BSON representation of current instance
+     */
     public Document toDocument() {
         Document newDocument = new Document();
         newDocument.append("type", type)
@@ -27,6 +34,11 @@ public class UserQueueObject implements Queueable {
         return newDocument;
     }
 
+    /**
+     * Parses a BSON document to a UserQueueObject
+     * @param document The document to parse
+     * @return The parsed UserQueueObject
+     */
     public static UserQueueObject fromDocument(Document document) {
         String type = document.getString("type");
         Document data = (Document) document.get("data");

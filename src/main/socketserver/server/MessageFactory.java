@@ -73,13 +73,18 @@ public class MessageFactory {
         return this;
     }
 
+    /**
+     * Sets the message id (for receipts)
+     * @param messageID The message id
+     * @return The factory
+     */
     public MessageFactory setMessageID(int messageID) {
         this.messageid = messageID;
         return this;
     }
 
     /**
-     * @return A string json representation of the message
+     * @return A json string representation of the message
      */
     public String getBody() {
         BaseMessage msg = buildMessageClass();
@@ -89,7 +94,7 @@ public class MessageFactory {
     /**
      * If something can be directly echoed (like a message), this function can be used to turn a class into json
      * @param object The object to be serialized
-     * @param <T> Must extends BaseMessage
+     * @param <T> Type of the message. Must extends BaseMessage
      * @return JSON representation of the provided object
      */
     public static <T extends BaseMessage> String fromProtocolObject(T object) {
