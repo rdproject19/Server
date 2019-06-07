@@ -72,6 +72,7 @@ public class DatabaseHandler {
         Document old = getUserIfExists(uid);
         if (old != null) {
 
+            newData.remove("uname");
             Set<Map.Entry<String, Object>> entries = old.entrySet();
             for (Map.Entry e : entries) {
                 if (newData.containsKey(e.getKey())) {
