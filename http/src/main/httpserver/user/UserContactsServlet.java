@@ -39,6 +39,10 @@ public class UserContactsServlet extends HttpServlet {
 
         List<String> contacts = h.getContacts(u);
 
+        if (contacts == null) {
+            res.setStatus(HttpStatus.NO_CONTENT_204);
+            return;
+        }
         if (contacts.isEmpty()) {
             res.setStatus(HttpStatus.NO_CONTENT_204);
             return;
