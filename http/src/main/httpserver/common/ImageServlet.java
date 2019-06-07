@@ -91,7 +91,7 @@ public class ImageServlet extends HttpServlet {
      * - socketserver.data (the image, encoded in base64) [string]
      *
      * On success:
-     *  Returns no text. Returns a 200 (OK) status code.
+     *  Returns the uploaded image's id. Returns a 200 (OK) status code.
      * On failure:
      *  Returns no text. Returns a 500 (INTERNAL SERVER ERROR) status code.
      * OR
@@ -128,6 +128,7 @@ public class ImageServlet extends HttpServlet {
             stream.write(rawdata);
             stream.close();
             stream.flush();
+            res.getWriter().print(imageid);
             res.setStatus(HttpStatus.OK_200);
         } catch (IOException ex) {
             ex.printStackTrace();
